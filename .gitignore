@@ -1,0 +1,9 @@
+*~
+_book/*
+node_modules/*
+.DS_Store
+.emacs.d/
+flymd.html
+flymd.md
+*.temp
+deploy.sh
