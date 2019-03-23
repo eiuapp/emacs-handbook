@@ -25,7 +25,8 @@
         "sitemap-general",
         "lightbox",
         "adsense",
-        "ga"
+        "ga",
+        "disqus"
     ],
     "pluginsConfig": {
         "theme-default": {
@@ -75,6 +76,9 @@
         },
         "ga": {
             "token": "UA-93485976-1"
+        },
+        "disqus": {
+            "shortName": "whoami"
         }
     }
 }
