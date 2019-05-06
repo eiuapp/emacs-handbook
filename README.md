@@ -1,19 +1,13 @@
-# Ceph Handbook
+# Emacs Handbook
 
-此书是[ceph](http://docs.ceph.com)的阅读与理解，帮助大家更快了解ceph的管理和使用。
+此书是[emacs](https://www.gnu.org/software/emacs/)的阅读与理解，帮助大家更快了解emacs的管理和使用。
 
-- GitHub地址：https://github.com/eiuapp/ceph-handbook
+- GitHub地址：https://github.com/eiuapp/emacs-handbook
 
-- 在线访问地址：https://eiu.app/ceph-handbook
+- 在线访问地址：https://eiuapp.github.io/emacs-handbook
 
-ceph是著名的存储系统。
+Emacs是神的编辑器，而Vim是编辑器之神.
 
-
-下图是ceph生态圈图：
-
-<!-- https://docs.openstack.org/swift/queens/associated_projects.html -->
-
-<!-- ![ceph生态](images/container-ecosystem.png) -->
 
 ## 相关资源
 

@@ -31,4 +31,4 @@ branches:
 
 env:
   global:
-    - REF=github.com/eiuapp/ceph-handbook.git # 设置 github 地址
+    - REF=github.com/eiuapp/emacs-handbook.git # 设置 github 地址
