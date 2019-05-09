@@ -9,6 +9,7 @@ lazycat-emacs 安装
 
 ## STEP
 
+### (可跳过)前期工作 ###
 
 ```bash
 DESKTOP-APB1HCJ% pwd
@@ -137,6 +138,9 @@ sudo apt-get build-dep emacs24
 
 还是会报错.
 
+### shell 编译安装 emacs ###
+
+
 https://github.com/emacs-mirror/emacs/blob/master/INSTALL
 
 看了一下, 然后找到
@@ -151,7 +155,7 @@ https://github.com/favadi/build-emacs
 
 没问题,安装成功.
 
-### 安装 deepin-emacs ###
+### 编译安装 emacs ###
 
 尝试用 build-emacs.sh 中的方法去安装 deepin-emacs
 
@@ -162,7 +166,14 @@ make
 sudo make install
 ```
 
-Install Deepin emacs
+安装完毕,则意味着2点:
+
+- 启动文件在 `/usr/share/xxy-deepin-emacs/common/bin/` 中
+- 启动配置中的 site-start.el 应该放在 `/usr/share/xxy-deepin-emacs/common/share/emacs/site-lisp/` 中
+
+### (可跳过)安装 deepin-emacs ###
+
+#### Install Deepin emacs
 
 ```bash
 sudo cp ./site-start.el /usr/share/xxy-deepin-emacs/common/share/emacs/site-lisp/
@@ -170,7 +181,7 @@ sudo cp -r ./site-lisp /usr/share/xxy-deepin-emacs
 sudo ln -s /usr/share/xxy-deepin-emacs/common/bin/emacs /usr/bin/xxy-deepin-emacs
 ```
 
-启动
+#### 启动
 
 ```bash
 which xxy-deepin-emacs
@@ -219,9 +230,99 @@ xxy-deepin-emacs
 
 提issue, https://github.com/manateelazycat/lazycat-emacs/issues/17
 
+经过回答,是另一个思路,换成其它字体.
+
+### 换字体
+
+找到字体的位置
+
+因为, 在 deepin-emacs 中没有找到这个 字体,我又回到最新的 lazycat-emacs
+
+
 
 
 ### lazycat-emacs ###
+
+为不再污染 用户之前的 emacs 设置, 决定,新建立一个用户v, 并设置好 ${HOME} 地圵
+
+#### 编译 emacs 
+
+之前,做过了,不做了, 总之是,编译到 `/usr/share/xxy-deepin-emacs/common/` 中了.
+
+#### 配置 lazycat-emacs
+
+clone the repository
+
+```bash
+git clone https://github.com/manateelazycat/lazycat-emacs/ ~
+```
+
+Build my config symlink to emacs directory:
+
+```bash
+sudo ln -s ~/lazycat-emacs/site-lisp /usr/share/emacs/lazycat
+```
+做软链接,方便本地修改.
+或者
+```bash
+sudo cp -r ~/lazycat-emacs/site-lisp/ /usr/share/emacs/lazycat
+```
+
+Copy site-start.el in emacs directory to start my config:
+
+```bash
+sudo cp ~/lazycat-emacs/site-start.el /usr/share/xxy-deepin-emacs/common/share/emacs/site-lisp/
+```
+
+这个 site-start.el 文件,是会加载刚刚我们放进去的目录,所以如果刚刚放入 /usr/share/emacs 中的不是这个目录, 则要修改一下目录地圵.
+
+```
+(add-subdirs-to-load-path "/usr/share/emacs/lazycat")
+```
+
+比如
+
+```bash
+DESKTOP-APB1HCJ% cat /usr/share/xxy-deepin-emacs/common/share/emacs/site-lisp/site-start.el
+(defun add-subdirs-to-load-path (dir)
+  "Recursive add directories to `load-path'."
+  (let ((default-directory (file-name-as-directory dir)))
+    (add-to-list 'load-path dir)
+    (normal-top-level-add-subdirs-to-load-path)))
+(add-subdirs-to-load-path "/usr/share/emacs/lazycat/site-lisp/")
+
+(require 'init)
+DESKTOP-APB1HCJ%
+```
+
+#### 修改字体
+
+因为我们这里的字体问题, 修改成之前为了spacemacs而安装的字体 `Source Code Pro` 
+
+```bash
+DESKTOP-APB1HCJ% sudo head lazycat/site-lisp/extensions/lazycat-theme/lazycat-theme.el | grep emacs-font-name
+(defvar emacs-font-name ""
+  (setq emacs-font-name "Monaco"))
+  (setq emacs-font-name "Source Code Pro")))
+DESKTOP-APB1HCJ%
+```
+
+#### Start emacs:
+
+```
+cd /usr/share/xxy-deepin-emacs/common/bin/
+./emacs
+```
+
+### 问题 ###
+
+#### M-x sdcv-search-pointer+ ####
+
+提示 `mpv, mplayer or mpg123 is needed to play word voice`
+
+
+#### 开启 emacs 时, *message* 提示, `no desktop file` ####
+
 
 
 
