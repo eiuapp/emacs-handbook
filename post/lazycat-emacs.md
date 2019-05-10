@@ -12,6 +12,8 @@ lazycat-emacs 安装
 
 ### 总结
 
+具体配置,可以看一下 https://github.com/eiuapp/lazycat-emacs 的 eiuapp 分支
+
 - 改一下词典的中文名为英文名.
 - 修改 sdcv.el 中 format: 1.去 `-x`
 
