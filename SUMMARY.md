@@ -3,13 +3,9 @@
 ## 序言
 
 * [前言](README.md)
+* [环境](post/emacs-env.md)
 
 ## install
-
-
-
-
-
 
 ## 常见问题
 
@@ -17,7 +13,6 @@
 * [lazycat-emacs安装](post/lazycat-emacs.md)
 
 ## 未来
-
 
 ## 相关资源
 
