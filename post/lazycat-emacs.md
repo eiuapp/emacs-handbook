@@ -5,9 +5,15 @@ lazycat-emacs 安装
 
 ## ENV
 
+- env: env-wsl
 - os: ubuntu16
 
 ## STEP
+
+### 总结
+
+- 改一下词典的中文名为英文名.
+- 修改 sdcv.el 中 format: 1.去 `-x`
 
 ### (可跳过)前期工作 ###
 
@@ -314,13 +320,100 @@ cd /usr/share/xxy-deepin-emacs/common/bin/
 ./emacs
 ```
 
-### 问题 ###
-
+### 问题(已解决) ###
 #### M-x sdcv-search-pointer+ ####
 
-提示 `mpv, mplayer or mpg123 is needed to play word voice`
+##### 提示 `mpv, mplayer or mpg123 is needed to play word voice` #####
 
+先安装 mpv 吧
 
+http://ubuntuhandbook.org/index.php/2016/07/install-mpv-media-player-ubuntu-16-04/
+
+1. To add PPA, open terminal (Ctrl+Alt+T) and run the command:
+
+```bash
+sudo add-apt-repository ppa:mc3man/mpv-tests
+```
+
+2. Then upgrade Mpv using Software Updater or just run the command in terminal to install/upgrade it:
+
+```bash
+sudo apt update && sudo apt install mpv
+```
+3. (Optional) To remove the PPA, go to Software & Updates -> Other Software tab. And remove mpv via command:
+
+```bash
+sudo apt remove mpv && sudo apt autoremove
+```
+
+重启,问题解决.
+
+##### `sdcv-filter sdcv-string is Nothing similar to hero, sorry :` #####
+
+运行 `M-x sdcv-search-pointer+`
+
+```bash
+LANG=en_US.UTF-8 sdcv -n -u "懒虫简明英汉词典" -u "懒虫简明汉英词典" -u "KDic11万英汉词典" hero --data-dir=/mnt/c/Users/a/wsl/home/v/lazycat-emacs/site-lisp/sdcv-dict(1:0 top) dir:v git:master text-mode [2019-05-09 19:07]
+sdcv-filter sdcv-string is Nothing similar to hero, sorry :
+```
+
+因为之前在 spacemacs 下已经成功了,所以我觉得,比较一下不同就可以了.不同点:
+
+- data-dir 
+- 用户不同
+
+先假定不受 `用户不同`的影响, 那么,我们就先尝试在命令行能否有返回
+
+因为, wsl下,输入中文会有问题,所以,我先在 词典集 中,复制一个, 让其可在 bash 中运行. 具体操作:
+把 `~/lazycat-emacs/site-lisp/sdcv-dict/` 中一个词典复制,修改其中的 `*.ifo` 中的 `bookname` 为英文, 比如, 把 `lazyworm-ec.ifo` 中的 `bookname=lazywormecbak`
+
+如,我们用刚刚这个复制出来的 lazywormecbak 词典, 翻译 `hero` 这个词.
+```bash
+v@DESKTOP-APB1HCJ:~$ LANG=en_US.UTF-8 sdcv -n -u "lazywormecbak" hero --data-dir=/mnt/c/Users/a/wsl/home/v/lazycat-emacs/site-lisp/sdcv-dict
+Found 1 items, similar to hero.
+-->lazywormecbak
+-->hero
+
+['hiru]
+n.
+英雄, 男主角, 男主人公
+
+v@DESKTOP-APB1HCJ:~$
+```
+
+这样说明,如果我们去修改 仓库中的 `~/lazycat-emacs/site-lisp/config/init-sdcv.el` 的词典 `sdcv-dictionary-simple-list` 为 `lazywormecbak`, 应该要返回一样的结果. 
+```bash
+(setq sdcv-dictionary-simple-list    ;星际译王屏幕取词词典, 简单, 快速
+      '("lazywormecbak"))
+;;      '("懒虫简明英汉词典"
+;;        "懒虫简明汉英词典"
+;;        "KDic11万英汉词典"))
+(setq sdcv-dictionary-complete-list     ;星际译王的词典, 完全, 详细
+      '(
+        "lazywormecbak"
+        "懒虫简明英汉词典"
+        "英汉汉英专业词典"
+        "XDICT英汉辞典"
+        "stardict1.3英汉辞典"
+        "WordNet"
+        "XDICT汉英辞典"
+        "Jargon"
+        "懒虫简明汉英词典"
+        "FOLDOC"
+        "新世纪英汉科技大词典"
+        "KDic11万英汉词典"
+        "朗道汉英字典5.0"
+        "CDICT5英汉辞典"
+        "新世纪汉英科技大词典"
+        "牛津英汉双解美化版"
+        "21世纪双语科技词典"
+        "quick_eng-zh_CN"
+        ))
+```
+测试. 成功得到返回结果.
+
+从这里看出, 如果我们要在这种情况下, 使用词典, 则要修改一下词典的中文名为英文名.
+### 问题(未解决) ###
 #### 开启 emacs 时, *message* 提示, `no desktop file` ####
 
 
