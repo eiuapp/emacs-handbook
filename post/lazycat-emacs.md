@@ -322,6 +322,81 @@ cd /usr/share/xxy-deepin-emacs/common/bin/
 ./emacs
 ```
 
+
+### lazycat-emacs 安装在已有用户u下 ###
+
+#### 复制环境 ####
+
+为了不影响刚刚新建用户v的 lazycat , 我这里 把 复制到了 `/usr/share/xxy-deepin-emacs-u`
+
+```bash
+DESKTOP-APB1HCJ% sudo cp /usr/share/xxy-deepin-emacs/ /usr/share/xxy-deepin-emacs-u/
+```
+
+#### 移除 ~/.emacs.d/ ####
+
+```bash
+DESKTOP-APB1HCJ% mv ~/.emacs.d/ ~/.emacs.d.wsl-ubuntu16-20190521.bak/
+```
+
+#### 把 lazycat-emacs clone 至 ~ 下 ####
+#### ln -s site-lisp ####
+
+```bash
+DESKTOP-APB1HCJ% sudo rm /usr/share/emacs/lazycat-u
+DESKTOP-APB1HCJ% sudo ln -s ~/lazycat-emacs/site-lisp /usr/share/emacs/lazycat-u
+DESKTOP-APB1HCJ% ll /usr/share/emacs/lazycat-u/
+total 0
+drwxr-xr-x 1 u u 4096 May  9 13:49 .
+drwxr-xr-x 1 u u 4096 May 10 11:04 ..
+drwxr-xr-x 1 u u 4096 May  9 13:49 config
+drwxr-xr-x 1 u u 4096 May  9 13:49 extensions
+drwxr-xr-x 1 u u 4096 May  9 13:49 pyim-dict
+drwxr-xr-x 1 u u 4096 May 10 10:57 sdcv-dict
+```
+
+这样, 就可以直接在`~/lazycat-emacs/`就可以有效果了.
+
+#### 配置 site-start.el ####
+
+```bash
+DESKTOP-APB1HCJ% cat /usr/share/xxy-deepin-emacs/common/share/emacs/site-lisp/site-start.el
+(defun add-subdirs-to-load-path (dir)
+  "Recursive add directories to `load-path'."
+  (let ((default-directory (file-name-as-directory dir)))
+    (add-to-list 'load-path dir)
+    (normal-top-level-add-subdirs-to-load-path)))
+(add-subdirs-to-load-path "/usr/share/emacs/lazycat/")
+
+(require 'init)
+
+DESKTOP-APB1HCJ% sudo vi /usr/share/xxy-deepin-emacs-u/common/share/emacs/site-lisp/site-start.el
+DESKTOP-APB1HCJ% cat /usr/share/xxy-deepin-emacs-u/common/share/emacs/site-lisp/site-start.el
+(defun add-subdirs-to-load-path (dir)
+  "Recursive add directories to `load-path'."
+  (let ((default-directory (file-name-as-directory dir)))
+    (add-to-list 'load-path dir)
+    (normal-top-level-add-subdirs-to-load-path)))
+(add-subdirs-to-load-path "/usr/share/emacs/lazycat-u/")
+
+(require 'init)
+
+DESKTOP-APB1HCJ%
+```
+
+#### 启动 ####
+
+```bash
+DESKTOP-APB1HCJ% pwd
+/usr/share/xxy-deepin-emacs-u/common/bin
+DESKTOP-APB1HCJ% ls
+ctags  ebrowse  emacs  emacs-26.1  emacsclient  etags
+DESKTOP-APB1HCJ% ./emacs
+```
+
+完美了, 可以在 u 用户下使用 lazycat-emacs 了.
+
+
 ### 问题(已解决) ###
 #### M-x sdcv-search-pointer+ ####
 
