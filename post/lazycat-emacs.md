@@ -340,6 +340,9 @@ DESKTOP-APB1HCJ% mv ~/.emacs.d/ ~/.emacs.d.wsl-ubuntu16-20190521.bak/
 ```
 
 #### 把 lazycat-emacs clone 至 ~ 下 ####
+
+必须要放在用户的${HOME}目录下, 否则报错.
+
 #### ln -s site-lisp ####
 
 ```bash
