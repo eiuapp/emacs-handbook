@@ -11,6 +11,7 @@
 
 * [chemacs快速切换emacs配置](post/chemacs.md)
 * [lazycat-emacs安装](post/lazycat-emacs.md)
+* [purcell-emacs安装](post/purcell-emacs-install.md)
 
 ## 未来
 
