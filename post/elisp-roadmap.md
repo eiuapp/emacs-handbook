@@ -52,3 +52,5 @@ xah lee 和 chen bin 都推荐过的几个大佬的配置
 [子龙山人](https://github.com/zilongshanren/spacemacs-private)
 
 [TommyX12](https://github.com/TommyX12/tommyx-emacs)
+
+[任文山RenWenshan](https://github.com/RenWenshan/wenshan-emacs)
