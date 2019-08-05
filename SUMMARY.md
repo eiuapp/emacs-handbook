@@ -13,6 +13,7 @@
 * [lazycat-emacs安装](post/lazycat-emacs.md)
 * [lazycat-emacs同步更新](post/lazycat-emacs-git-merge-master.md)
 * [purcell-emacs安装](post/purcell-emacs-install.md)
+* [tommyx-emacs安装](post/tommyx-emacs-install.md)
 
 ## setup
 
