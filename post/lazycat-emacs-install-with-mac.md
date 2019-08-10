@@ -1,3 +1,12 @@
+在 mac 下安装 lazycat-emacs
+
+## 结论
+
+- lazycat-emacs 文件夹可放在任意位置
+- 包下载目录（这里是`~/.emacs.d.lazycat-emacs/`) 可放在任意位置
+- 要配置 cache-path-from-shell
+
+## 第一次启动
 
 ```
 File is missing: Cannot open load file, No such file or directory, /Users/tomtsang/lazycat-emacs/init.el
@@ -9,7 +18,7 @@ File is missing: Cannot open load file, No such file or directory, /Users/tomtsa
 
 把 cat site-start.el 放入这个 init.el 中
 
-## (错误，可跳过)把 init.el 放在 ~/lazycat-emacs/ 
+## (错误，可跳过)把 init.el 放在 ~/lazycat-emacs/
 
 返回到 ~/lazycat-emacs/ 中启动
 
@@ -19,13 +28,14 @@ Consider using a subdirectory instead, e.g.: /Users/tomtsang/lazycat-emacs/lisp
 ```
 
 那就创建文件夹
+
 ```
 mkdir -p  ~/lazycat-emacs/lisp
 ```
 
 运行后，会出现 迭代引用文件，所以，这肯定不行的。
 
-## (错误，可跳过)把 init.el 放在 ~/.emacs.d.lazycat-emacs/ 
+## (错误，可跳过)把 init.el 放在 ~/.emacs.d.lazycat-emacs/
 
 ```
 mkdir -p  ~/.emacs.d.lazycat-emacs/
@@ -78,6 +88,7 @@ Debugger entered--Lisp error: (file-missing "Cannot open load file" "No such fil
 ```
 
 从中可以看到：
+
 - 确实是在 `~/.emacs.d.lazycat-emacs/` 中进行了安装包
 - 报错是因为 ~/lazycat-emacs/site-lisp/config/init.el 中的 require 语句
 
@@ -104,6 +115,8 @@ Debugger entered--Lisp error: (file-missing "Cannot open load file" "No such fil
 
 `/Users/tomtsang/lazycat-emacs/site-lisp/extensions/cache-path-from-shell/cache-path-from-shell.el`
 
+## (可跳过) 补条件
+
 但是，`grep exec-path-from-shell -rl ./` 发现，有好多文件都调用到了这个呀，总不能全都注释吧。
 
 还是要想办法解决问题...
@@ -114,6 +127,101 @@ Debugger entered--Lisp error: (file-missing "Cannot open load file" "No such fil
 - https://github.com/purcell/exec-path-from-shell/issues/34
 - https://github.com/purcell/exec-path-from-shell/pull/79
 
+一顿瞎操作如下. 主要是在 最后的 `require(init)` 之前，加条件。
 
+具体如下：
 
+```
+;; exec-path-from-shell
+;;(require 'exec-path-from-shell)
 
+;;(when (memq window-system '(mac ns))
+;;    (exec-path-from-shell-initialize))
+
+;;(provide 'setup-exec-path-from-shell)
+
+;;(setq exec-path-from-shell-arguments '("-i"))
+;;(setq exec-path-from-shell-shell-name "bash")
+
+;;(defmacro ignore-warn (&rest body)
+;;  (declare (debug t) (indent 0))
+;;  `(cl-letf (((symbol-function 'warn) #'ignore))
+;;     ,@body))
+;;(ignore-warn
+;;  (exec-path-from-shell-copy-env "PATH"))
+```
+
+好像，也没有什么用。
+
+## cache-path-from-shell
+
+cn.bing.com 搜索 `exec-path-from-shell 安装 emacs` 找到 王勇写的 [cache-path-from-shell, 只加载环境变量一次](https://manateelazycat.github.io/emacs/2018/09/19/cache-path-from-shell.html) 。看一下。最关键的点是：
+
+- cache-path-from-shell 建立一个缓存机制, 确保 exec-path-from-shell-initialize 命令只能执行一次, 从而避免多个 Emacs 插件调用 exec-path-from-shell-initialize 命令而叠加的延时和不爽.
+- 从 [cache-path-from-shell](https://github.com/manateelazycat/cache-path-from-shell) 下载 cache-path-from-shell.el ,然后在 ~/.emacs 的最开头的位置加上(注意一定是最开头的位置)
+
+所以，我们要做的就是：
+
+- 下载 [cache-path-from-shell](https://github.com/manateelazycat/cache-path-from-shell) 和 [exec-path-from-shell](https://github.com/purcell/exec-path-from-shell) 包至一个位置，加至 load-path
+- cache-path-from-shell 加载 exec-path-from-shell
+- 把配置写到 `~/.emacs.d.lazycat-emacs/init.el` 中
+  （事后，你会发觉，在`~/.emacs.d.lazycat-emacs/init.el`中不加载`cache-path-from-shell`也是可以的，但是，我们还是加载吧)
+
+### 下载 exec-path-from-shell
+
+```bash
+mkdir -p ~/elisp/
+git clone https://github.com/purcell/exec-path-from-shell ~/elisp/exec-path-from-shell/
+```
+
+### 下载 cache-path-from-shell
+
+```bash
+mkdir -p ~/elisp/
+git clone https://github.com/manateelazycat/cache-path-from-shell ~/elisp/cache-path-from-shell/
+```
+
+### cache-path-from-shell 加载 exec-path-from-shell
+
+`(add-to-list 'load-path (expand-file-name "~/elisp/exec-path-from-shell/"))` 加在 `(require 'exec-path-from-shell)` 上一行。如下：
+
+```bash
+;;; Require
+(add-to-list 'load-path (expand-file-name "~/elisp/exec-path-from-shell/"))
+(require 'exec-path-from-shell)
+```
+
+原因是，lazycat-emacs 的包，都是在本地，手工加载的。
+
+### 改造 `~/.emacs.d.lazycat-emacs/init.el` 的第二部分
+
+也就是 把 site-start.el 的部分, 加上 `(require 'cache-path-from-shell)` 条件。
+同样的原因，要在 `(require 'cache-path-from-shell)` 前加载下载的文件，必须是 `cache-path-from-shell.el`所在的目录。
+
+```
+(add-to-list 'load-path (expand-file-name "~/elisp/cache-path-from-shell"))
+(require 'cache-path-from-shell)
+```
+
+具体如下：
+
+```
+;;; Dependencies
+
+(add-to-list 'load-path (expand-file-name "~/elisp/cache-path-from-shell"))
+(require 'cache-path-from-shell)
+
+(defun add-subdirs-to-load-path (dir)
+  "Recursive add directories to `load-path'."
+  (let ((default-directory (file-name-as-directory dir)))
+    (add-to-list 'load-path dir)
+    (normal-top-level-add-subdirs-to-load-path)))
+;;(add-subdirs-to-load-path "/usr/share/emacs/lazycat/")
+(add-subdirs-to-load-path "~/lazycat-emacs-3/site-lisp/")
+
+(require 'init)
+```
+
+**注意** 我这里的配置文件夹，修改成了 `~/lazycat-emacs-3/site-lisp/`, 这说明了，这个配置文件夹，放在哪里都是可以的。
+
+然后启动，就正常了。
