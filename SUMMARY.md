@@ -15,6 +15,14 @@
 * [purcell-emacs安装](post/purcell-emacs-install.md)
 * [tommyx-emacs安装](post/tommyx-emacs-install.md)
 
+## 使用
+
+* [在 Emacs 下浏览网页（w3m）](post/w3m/w3m-step-by-step.md)
+
+## lazycat-emacs
+
+* [lazycat-emacs 安装包](post/lazycat-emacs/lazycat-install-package.md)
+
 ## setup
 
 * [emacs some display setup](post/emacs-display-setup.md)
