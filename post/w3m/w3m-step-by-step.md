@@ -109,6 +109,14 @@ google: `emacs w3m proxy` 找到：
 
 ##### 正确
 
+- https://melpa.org/#/?q=emacs-w3m
+
+找到了 w3m, 然后点击 `github`, 来到
+
+- https://github.com/emacs-w3m/emacs-w3m
+
+再来到
+
 - https://github.com/emacs-w3m/emacs-w3m/blob/8fd65dd9c7d2393ab66c65ee1de67a84dcc779ce/README
 
 其中 `4.3. Proxy Gateway` 中确实是有提到上面的配置。但是，我尝试了，没有成功。
