@@ -60,6 +60,8 @@ sudo apt-get install w3m-el-snapshot
 
 #### w3m 在 emacs 进行 科学上网
 
+##### (可跳过) 
+
 google: `emacs w3m proxy` 找到：
 
 - https://lists.gnu.org/archive/html/help-gnu-emacs/2008-10/msg00046.html
@@ -71,9 +73,59 @@ google: `emacs w3m proxy` 找到：
     '("-o" "http_proxy=http://127.0.0.1:6152/")))
 ```
 
+###### 配置不正确
+
 但是提示： `Error (use-package): w3m/:init: Symbol’s value as variable is void: w3m-command-arguments`
 
 怎么解决？
+
+这说明，配置还是有问题的。
+
+###### 配置正确，要放在 w3m 启动之后
+
+然后，我放在了自己的layer中，配置如下：
+
+```
+(defun zilongshanren-tomtsang/init-w3m ()
+  (use-package w3m
+    :init
+    )
+  )
+(defun zilongshanren-tomtsang/post-init-w3m ()
+  ;; w3m post start
+  ;; Proxy Gateway
+  (setq w3m-command-arguments
+        (nconc w3m-command-arguments
+               '("-o" "http_proxy=http://127.0.0.1:8118/")))
+  ;; w3m post end
+)
+```
+
+然后在 emacs 中运行 `C-h v w3m-command-arguments RTN`, 确实是有看到 `"-o" "http_proxy=http://127.0.0.1:8118/"`, 成功。
+
+但是，在 emacs 中运行 `M-x w3m RTN`, `g RTN www.google.com` 不成功。
+
+是这个参数，本身不正确，还是参数本身就无效？不明白。有知道的，请告诉我呀...
+
+##### 正确
+
+- https://github.com/emacs-w3m/emacs-w3m/blob/8fd65dd9c7d2393ab66c65ee1de67a84dcc779ce/README
+
+其中 `4.3. Proxy Gateway` 中确实是有提到上面的配置。但是，我尝试了，没有成功。
+
+所以，我就尝试 
+
+- 确保 http_proxy 有效：在命令行中运行： `curl --proxy http://127.0.0.1:8118 https://www.reddit.com/`
+- 运行`emacs`前，先在命令行中运行： `export http_proxy='http://127.0.0.1:8118'`
+- 运行`emacs`：在命令行中运行：`emacs --with-profile spacemacs`
+
+```bash
+curl --proxy http://127.0.0.1:8118 https://www.reddit.com/
+export http_proxy='http://127.0.0.1:8118'
+emacs --with-profile spacemacs
+```
+
+然后在 emacs 中运行 `M-x w3m RTN`, `g RTN www.google.com` 成功。
 
 ## 配置
 
