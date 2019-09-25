@@ -22,6 +22,8 @@
 ## lazycat-emacs
 
 * [lazycat-emacs 安装包](post/lazycat-emacs/lazycat-install-package.md)
+* [lazycat-emacs key map](post/lazycat-emacs/lazycat-key.md)
+* [lazycat-emacs input method](post/lazycat-emacs/lazycat-input-method.md)
 
 ## setup
 
@@ -37,4 +39,3 @@
 ## 相关资源
 
 <!-- - [ceph技术工具与资源](docs/tech_resource.md) -->
-
