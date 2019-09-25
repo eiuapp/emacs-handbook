@@ -28,6 +28,10 @@
 * [emacs some display setup](post/emacs-display-setup.md)
 * [emacs setup frame title](post/emacs-frame-title.md)
 
+## other software
+
+* [emacs with word](post/emacs-word.md)
+
 ## 未来
 
 ## 相关资源
