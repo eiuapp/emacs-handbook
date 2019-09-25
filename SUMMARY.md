@@ -14,6 +14,8 @@
 * [lazycat-emacs同步更新](post/lazycat-emacs-git-merge-master.md)
 * [purcell-emacs安装](post/purcell-emacs-install.md)
 * [tommyx-emacs安装](post/tommyx-emacs-install.md)
+* [dsdshcym-doom-emacs安装](post/dsdshcym-doom-emacs-install.md)
+* [pierre-lecocq emacs安装](post/pierre-lecocq-emacs-install.md)
 
 ## 使用
 
