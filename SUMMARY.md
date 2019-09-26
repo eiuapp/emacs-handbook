@@ -32,6 +32,7 @@
 * [emacs some display setup](post/emacs-display-setup.md)
 * [emacs setup frame title](post/emacs-frame-title.md)
 * [some usefull packages](post/usefull-packages.md)
+* [install emacs-application-framework](post/install-emacs-application-framework.md)
 
 ## other software
 
