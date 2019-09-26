@@ -39,6 +39,8 @@
 
 ## 未来
 
+* [learn how to learn](post/learn/learn-how-to-learn.md)
+
 ## 相关资源
 
 <!-- - [ceph技术工具与资源](docs/tech_resource.md) -->
