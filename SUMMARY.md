@@ -7,8 +7,6 @@
 
 ## install
 
-## 常见问题
-
 * [chemacs快速切换emacs配置](post/chemacs.md)
 * [lazycat-emacs安装](post/lazycat-emacs.md)
 * [lazycat-emacs同步更新](post/lazycat-emacs-git-merge-master.md)
@@ -16,6 +14,10 @@
 * [tommyx-emacs安装](post/tommyx-emacs-install.md)
 * [dsdshcym-doom-emacs安装](post/dsdshcym-doom-emacs-install.md)
 * [pierre-lecocq emacs安装](post/pierre-lecocq-emacs-install.md)
+
+## 常见问题
+
+* [emacs使用tramp时打开远程shell](post/emacs-open-remote-shell.md)
 
 ## 使用
 
