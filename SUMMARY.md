@@ -18,6 +18,7 @@
 ## 常见问题
 
 * [emacs使用tramp时打开远程shell](post/emacs-open-remote-shell.md)
+* [emacs 不同的js工程使用不同的eslint](post/emacs-auto-use-diff-eslint.md)
 
 ## 使用
 
@@ -39,6 +40,10 @@
 ## other software
 
 * [emacs with word](post/emacs-word.md)
+
+## emacs network
+
+* [emacs with proxy](post/emacs-network/emacs-proxy.md)
 
 ## 未来
 
