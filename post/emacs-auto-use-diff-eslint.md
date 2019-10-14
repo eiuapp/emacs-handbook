@@ -1,0 +1,1 @@
+emacs 不同的js工程使用不同的eslint
