@@ -15,4 +15,5 @@ vedio
 
 ## elisp
 
-- https://github.com/chrisdone/elisp-guide/blob/master/README.md
+- [elisp-guide](https://github.com/chrisdone/elisp-guide)
+- [lisha's elisp-guide](http://ergoemacs.org/emacs/elisp.html)

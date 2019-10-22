@@ -23,6 +23,7 @@
 ## 使用
 
 * [在 Emacs 下浏览网页（w3m）](post/w3m/w3m-step-by-step.md)
+* [find and replace](post/usage/find-replace.md)
 
 ## lazycat-emacs
 
