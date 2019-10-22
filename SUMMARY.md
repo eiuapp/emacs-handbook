@@ -46,6 +46,10 @@
 
 * [emacs with proxy](post/emacs-network/emacs-proxy.md)
 
+## emacs rocks
+
+* [episode 05](post/emacs-rocks/5-keys.md)
+
 ## 未来
 
 * [learn how to learn](post/learn/learn-how-to-learn.md)
