@@ -56,6 +56,6 @@
 
 ## 相关资源
 
-* [emacs reference configuration](post/emacs-reference.md)
+* [emacs master configuration](post/emacs-reference.md)
 
 <!-- - [ceph技术工具与资源](docs/tech_resource.md) -->
