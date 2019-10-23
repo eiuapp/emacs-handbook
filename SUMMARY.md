@@ -54,6 +54,10 @@
 
 * [learn how to learn](post/learn/learn-how-to-learn.md)
 
+## my emacs faq record
+
+* [my emacs record](post/learn/emacs-record.md)
+
 ## 相关资源
 
 * [emacs master configuration](post/emacs-reference.md)
