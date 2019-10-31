@@ -24,6 +24,7 @@
 
 * [在 Emacs 下浏览网页（w3m）](post/w3m/w3m-step-by-step.md)
 * [find and replace](post/usage/find-replace.md)
+* [换行](post/usage/truncate-line.md)
 
 ## lazycat-emacs
 
