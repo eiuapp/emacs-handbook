@@ -51,6 +51,10 @@
 
 * [episode 05](post/emacs-rocks/5-keys.md)
 
+## org-mode
+
+* [org-mode与pdf](post/org-mode/org-mode-pdf.md)
+
 ## 未来
 
 * [learn how to learn](post/learn/learn-how-to-learn.md)
