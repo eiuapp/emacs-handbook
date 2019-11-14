@@ -55,6 +55,10 @@
 
 * [org-mode与pdf](post/org-mode/org-mode-pdf.md)
 
+## magit
+
+* [magit faq](post/magit/faq.md)
+
 ## 未来
 
 * [learn how to learn](post/learn/learn-how-to-learn.md)
