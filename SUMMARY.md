@@ -59,6 +59,10 @@
 
 * [magit faq](post/magit/faq.md)
 
+## irc
+
+* [emacs irc](post/irc/emacs-irc.md)
+
 ## 未来
 
 * [learn how to learn](post/learn/learn-how-to-learn.md)
