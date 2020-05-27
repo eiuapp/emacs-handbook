@@ -28,9 +28,10 @@
 
 ## lazycat-emacs
 
-* [lazycat-emacs 安装包](post/lazycat-emacs/lazycat-install-package.md)
-* [lazycat-emacs key map](post/lazycat-emacs/lazycat-key.md)
-* [lazycat-emacs input method](post/lazycat-emacs/lazycat-input-method.md)
+* [lazycat-emacs 初始化安装在ubuntu](post/lazycat/lazycat-init-base-ubuntu.md)
+* [lazycat-emacs 安装包](post/lazycat/lazycat-install-package.md)
+* [lazycat-emacs key map](post/lazycat/lazycat-key.md)
+* [lazycat-emacs input method](post/lazycat/lazycat-input-method.md)
 
 ## setup
 
@@ -42,7 +43,8 @@
 ## other software
 
 * [emacs with word](post/emacs-word.md)
-
+## theme
+* [vscode-dark-emacs-theme](post/theme/vscode-dark-emacs-theme.md)
 ## emacs network
 
 * [emacs with proxy](post/emacs-network/emacs-proxy.md)
