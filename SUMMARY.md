@@ -40,9 +40,11 @@
 * [some usefull packages](post/usefull-packages.md)
 * [install emacs-application-framework](post/install-emacs-application-framework.md)
 
-## other software
+## extensions
 
-* [emacs with word](post/emacs-word.md)
+* [emacs chrome](post/extensions/emacs_chrome.md)
+* [emacs with word](post/extensions/emacs-word.md)
+
 ## theme
 * [vscode-dark-emacs-theme](post/theme/vscode-dark-emacs-theme.md)
 ## emacs network
