@@ -57,7 +57,7 @@ https://github.com/adobe-fonts/source-code-pro/issues/17#issuecomment-8967116
 
 这里应该是没有安装,所以,安装一下
 
-最后是 https://askubuntu.com/questions/193072/how-to-use-the-adobe-source-code-pro-font 
+最后是 https://askubuntu.com/questions/193072/how-to-use-the-adobe-source-code-pro-font
 
 
 安装完成.
@@ -83,7 +83,7 @@ DESKTOP-APB1HCJ%
 ```
 
 
-尝试去除 `--with-x-toolkit=gtk3` 因为我们这里的 xserver 是通过 MobaXterm_Personal_11.1.exe . 
+尝试去除 `--with-x-toolkit=gtk3` 因为我们这里的 xserver 是通过 MobaXterm_Personal_11.1.exe .
 
 `./configure --prefix=/usr/share/deepin-emacs/common `
 
@@ -92,7 +92,7 @@ DESKTOP-APB1HCJ%
 
 https://stackoverflow.com/questions/52722096/build-emacs-and-gnutls-not-found
 
-方法1 
+方法1
 
 ```bash
 apt-cache search libgnutls
@@ -100,13 +100,13 @@ apt-cache search libgnutls
 
 然后安装相应的包.
 
-方法2 
+方法2
 
 ```bash
 ./configure --prefix=/usr/share/deepin-emacs/common --with-x-toolkit=gtk3 --with-gnutls=ifavailable
 ```
 
-我用 ./configure --prefix=/usr/share/deepin-emacs/common --with-x-toolkit=gtk3 --with-gnutls=ifavailable 
+我用 ./configure --prefix=/usr/share/deepin-emacs/common --with-x-toolkit=gtk3 --with-gnutls=ifavailable
 
 然后 make ,又报下面的错误
 
@@ -125,19 +125,19 @@ DESKTOP-APB1HCJ%
 
 ```bash
 sudo apt-get install libgnutls-dev
-./configure --prefix=/usr/share/deepin-emacs/common --with-x-toolkit=gtk3 
+./configure --prefix=/usr/share/deepin-emacs/common --with-x-toolkit=gtk3
 make
 ```
 
 还是报一样的错误
 
-回想一下, 我们这一步的目的就是 编译安装 emacs , 所以, 
+回想一下, 我们这一步的目的就是 编译安装 emacs , 所以,
 
 http://ergoemacs.org/emacs/building_emacs_from_git_repository.html
 
 http://ergoemacs.org/emacs/building_emacs_on_linux.html
 
-运行 
+运行
 
 ```bash
 sudo apt-get install build-essential
@@ -169,8 +169,8 @@ https://github.com/favadi/build-emacs
 
 ```bash
 sudo mkdir -p /usr/share/xxy-deepin-emacs/common
-./configure --prefix=/usr/share/xxy-deepin-emacs/common --with-xft --with-x-toolkit=gtk3 
-make 
+./configure --prefix=/usr/share/xxy-deepin-emacs/common --with-xft --with-x-toolkit=gtk3
+make
 sudo make install
 ```
 
@@ -207,7 +207,8 @@ set-face-attribute: Font not available: #<font-spec nil nil Droid\ Sans\ Mono-14
 
 报错信息中提到了 `Droid Sans Mono`
 
-搜索 `ubuntu 安装 Droid Sans Mono`
+#### `ubuntu 安装 Droid Sans Mono`
+##### 搜索 `ubuntu 安装 Droid Sans Mono`
 
 https://www.jianshu.com/p/ed098f15f638
 
@@ -240,6 +241,26 @@ xxy-deepin-emacs
 
 经过回答,是另一个思路,换成其它字体.
 
+##### No Droid Sans Mono in Ubuntu 16.04
+https://www.reddit.com/r/LinuxActionShow/comments/4sq9yb/no_droid_sans_mono_in_ubuntu_1604/d5bsvm0/
+
+所以，关于字体的本质，其实就是, saving it in it your ~/.fonts folder, for single-user setups.
+
+比如,我们在使用spacemacs时,就有使用SourceCodePro字体,那么对应地,在 `~/.fonts/` 文件夹下,就有对应的字体内容.
+
+```bash
+$ ls ~/.fonts
+SourceCodePro-BlackIt.otf       SourceCodePro-LightIt.otf
+SourceCodePro-Black.otf         SourceCodePro-Light.otf
+SourceCodePro-BoldIt.otf        SourceCodePro-MediumIt.otf
+SourceCodePro-Bold.otf          SourceCodePro-Medium.otf
+SourceCodePro-ExtraLightIt.otf  SourceCodePro-Regular.otf
+SourceCodePro-ExtraLight.otf    SourceCodePro-SemiboldIt.otf
+SourceCodePro-It.otf            SourceCodePro-Semibold.otf
+```
+
+所以,要使用Droid Sans Mono in Ubuntu 16.0, 就可以手动下载Droid Sans Mono放至 `~/.fonts/` 文件夹下,就有对应的字体内容.
+
 ### 换字体
 
 找到字体的位置
@@ -253,7 +274,7 @@ xxy-deepin-emacs
 
 为不再污染 用户之前的 emacs 设置, 决定,新建立一个用户v, 并设置好 ${HOME} 地圵
 
-#### 编译 emacs 
+#### 编译 emacs
 
 之前,做过了,不做了, 总之是,编译到 `/usr/share/xxy-deepin-emacs/common/` 中了.
 
@@ -305,7 +326,7 @@ DESKTOP-APB1HCJ%
 
 #### 修改字体
 
-因为我们这里的字体问题, 修改成之前为了spacemacs而安装的字体 `Source Code Pro` 
+因为我们这里的字体问题, 修改成之前为了spacemacs而安装的字体 `Source Code Pro`
 
 ```bash
 DESKTOP-APB1HCJ% sudo head lazycat/site-lisp/extensions/lazycat-theme/lazycat-theme.el | grep emacs-font-name
@@ -439,7 +460,7 @@ sdcv-filter sdcv-string is Nothing similar to hero, sorry :
 
 因为之前在 spacemacs 下已经成功了,所以我觉得,比较一下不同就可以了.不同点:
 
-- data-dir 
+- data-dir
 - 用户不同
 
 先假定不受 `用户不同`的影响, 那么,我们就先尝试在命令行能否有返回
@@ -461,7 +482,7 @@ n.
 v@DESKTOP-APB1HCJ:~$
 ```
 
-这样说明,如果我们去修改 仓库中的 `~/lazycat-emacs/site-lisp/config/init-sdcv.el` 的词典 `sdcv-dictionary-simple-list` 为 `lazywormecbak`, 应该要返回一样的结果. 
+这样说明,如果我们去修改 仓库中的 `~/lazycat-emacs/site-lisp/config/init-sdcv.el` 的词典 `sdcv-dictionary-simple-list` 为 `lazywormecbak`, 应该要返回一样的结果.
 ```bash
 (setq sdcv-dictionary-simple-list    ;星际译王屏幕取词词典, 简单, 快速
       '("lazywormecbak"))
@@ -495,14 +516,3 @@ v@DESKTOP-APB1HCJ:~$
 从这里看出, 如果我们要在这种情况下, 使用词典, 则要修改一下词典的中文名为英文名.
 ### 问题(未解决) ###
 #### 开启 emacs 时, *message* 提示, `no desktop file` ####
-
-
-
-
-
-
-
-
-
-
-
