@@ -592,3 +592,26 @@ some pyqt related package must install
 ```
 pip3 install PyQtWebEngine -i https://pypi.tuna.tsinghua.edu.cn/simple
 ```
+
+# eaf
+
+## eaf download page
+
+when i use `M-x eaf-proxy-insert_or_open_download_manage_page`, show the following error:
+
+```
+dbus-call-method: D-Bus error: "Traceback (most recent call last):\n  File \"/usr/lib/python3/dist-packages/dbus/service.py\", line 707, in _message_cb\n    retval = candidate_method(self, *args, **keywords)\n  File \"/usr/share/emacs/lazycat/extensions/emacs-application-framework/eaf.py\", line 326, in execute_function\n    buffer.execute_function(function_name)\n  File \"/home/a/lazycat-emacs/site-lisp/extensions/emacs-application-framework/core/buffer.py\", line 216, in execute_function\n    getattr(self, function_name)()\n  File \"/home/a/lazycat-emacs/site-lisp/extensions/emacs-application-framework/core/browser.py\", line 861, in _do\n    getattr(self, method_name)()\n  File \"/home/a/lazycat-emacs/site-lisp/extensions/emacs-application-framework/core/browser.py\", line 734, in open_download_manage_page\n    self.try_start_aria2_daemon()\n  File \"/home/a/lazycat-emacs/site-lisp/extensions/emacs-application-framework/core/browser.py\", line 731, in try_start_aria2_daemon\n    subprocess.Popen(aria2_args, stdout=null_file)\n  File \"/usr/lib/python3.6/subprocess.py\", line 729, in __init__\n    restore_signals, start_new_session)\n  File \"/usr/lib/python3.6/subprocess.py\", line 1364, in _execute_child\n    raise child_exception_type(errno_num, err_msg, err_filename)\nFileNotFoundError: [Errno 2] No such file or directory: 'aria2c': 'aria2c'\n" [2 times]
+```
+
+so install aria2c
+
+```bash
+sudo apt install aria2c
+```
+## eaf open mmd file
+
+`M-x eaf-open *.mmd`
+
+```bash
+pip3 install pyinotify markdown
+```
