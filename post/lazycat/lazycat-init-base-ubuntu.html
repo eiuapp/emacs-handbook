@@ -1,0 +1,1384 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>lazycat-emacs 初始化安装在ubuntu · Emacs Handbook - Emacs 实践指南 by eiuapp</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="eiuapp">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-page-toc-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism-ghcolors.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="lazycat-install-package.html" />
+    
+    
+    <link rel="prev" href="../usage/truncate-line.html" />
+    
+
+    
+        <link rel="shortcut icon" href='../../favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='../../favicon.ico' type="image/x-icon">
+    
+    
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"repo":"eiuapp/emacs-handbook","types":["star"],"size":"small"};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://eiuapp.github.io/emacs-handbook" target="_blank" class="custom-link">Emacs Handbook</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        <li class="header">序言</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../emacs-env.html">
+            
+                <a href="../emacs-env.html">
+            
+                    
+                        <b>1.2.</b>
+                    
+                    环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">install</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../chemacs.html">
+            
+                <a href="../chemacs.html">
+            
+                    
+                        <b>2.1.</b>
+                    
+                    chemacs快速切换emacs配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../lazycat-emacs.html">
+            
+                <a href="../lazycat-emacs.html">
+            
+                    
+                        <b>2.2.</b>
+                    
+                    lazycat-emacs安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../lazycat-emacs-git-merge-master.html">
+            
+                <a href="../lazycat-emacs-git-merge-master.html">
+            
+                    
+                        <b>2.3.</b>
+                    
+                    lazycat-emacs同步更新
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../purcell-emacs-install.html">
+            
+                <a href="../purcell-emacs-install.html">
+            
+                    
+                        <b>2.4.</b>
+                    
+                    purcell-emacs安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../tommyx-emacs-install.html">
+            
+                <a href="../tommyx-emacs-install.html">
+            
+                    
+                        <b>2.5.</b>
+                    
+                    tommyx-emacs安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="../dsdshcym-doom-emacs-install.html">
+            
+                <a href="../dsdshcym-doom-emacs-install.html">
+            
+                    
+                        <b>2.6.</b>
+                    
+                    dsdshcym-doom-emacs安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="../pierre-lecocq-emacs-install.html">
+            
+                <a href="../pierre-lecocq-emacs-install.html">
+            
+                    
+                        <b>2.7.</b>
+                    
+                    pierre-lecocq emacs安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">常见问题</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../emacs-open-remote-shell.html">
+            
+                <a href="../emacs-open-remote-shell.html">
+            
+                    
+                        <b>3.1.</b>
+                    
+                    emacs使用tramp时打开远程shell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../emacs-auto-use-diff-eslint.html">
+            
+                <a href="../emacs-auto-use-diff-eslint.html">
+            
+                    
+                        <b>3.2.</b>
+                    
+                    emacs 不同的js工程使用不同的eslint
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">使用</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../w3m/w3m-step-by-step.html">
+            
+                <a href="../w3m/w3m-step-by-step.html">
+            
+                    
+                        <b>4.1.</b>
+                    
+                    在 Emacs 下浏览网页（w3m）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../usage/find-replace.html">
+            
+                <a href="../usage/find-replace.html">
+            
+                    
+                        <b>4.2.</b>
+                    
+                    find and replace
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../usage/truncate-line.html">
+            
+                <a href="../usage/truncate-line.html">
+            
+                    
+                        <b>4.3.</b>
+                    
+                    换行
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">lazycat-emacs</li>
+        
+        
+    
+        <li class="chapter active" data-level="5.1" data-path="lazycat-init-base-ubuntu.html">
+            
+                <a href="lazycat-init-base-ubuntu.html">
+            
+                    
+                        <b>5.1.</b>
+                    
+                    lazycat-emacs 初始化安装在ubuntu
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="lazycat-install-package.html">
+            
+                <a href="lazycat-install-package.html">
+            
+                    
+                        <b>5.2.</b>
+                    
+                    lazycat-emacs 安装包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="lazycat-key.html">
+            
+                <a href="lazycat-key.html">
+            
+                    
+                        <b>5.3.</b>
+                    
+                    lazycat-emacs key map
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="lazycat-input-method.html">
+            
+                <a href="lazycat-input-method.html">
+            
+                    
+                        <b>5.4.</b>
+                    
+                    lazycat-emacs input method
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">setup</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../emacs-display-setup.html">
+            
+                <a href="../emacs-display-setup.html">
+            
+                    
+                        <b>6.1.</b>
+                    
+                    emacs some display setup
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="../emacs-frame-title.html">
+            
+                <a href="../emacs-frame-title.html">
+            
+                    
+                        <b>6.2.</b>
+                    
+                    emacs setup frame title
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="../usefull-packages.html">
+            
+                <a href="../usefull-packages.html">
+            
+                    
+                        <b>6.3.</b>
+                    
+                    some usefull packages
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="../install-emacs-application-framework.html">
+            
+                <a href="../install-emacs-application-framework.html">
+            
+                    
+                        <b>6.4.</b>
+                    
+                    install emacs-application-framework
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">extensions</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../extensions/emacs_chrome.html">
+            
+                <a href="../extensions/emacs_chrome.html">
+            
+                    
+                        <b>7.1.</b>
+                    
+                    emacs chrome
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="../extensions/emacs-word.html">
+            
+                <a href="../extensions/emacs-word.html">
+            
+                    
+                        <b>7.2.</b>
+                    
+                    emacs with word
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">theme</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../theme/vscode-dark-emacs-theme.html">
+            
+                <a href="../theme/vscode-dark-emacs-theme.html">
+            
+                    
+                        <b>8.1.</b>
+                    
+                    vscode-dark-emacs-theme
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="../emacs-network/emacs-proxy.html">
+            
+                <a href="../emacs-network/emacs-proxy.html">
+            
+                    
+                        <b>8.2.</b>
+                    
+                    emacs with proxy
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">emacs rocks</li>
+        
+        
+    
+        <li class="chapter " data-level="9.1" data-path="../emacs-rocks/5-keys.html">
+            
+                <a href="../emacs-rocks/5-keys.html">
+            
+                    
+                        <b>9.1.</b>
+                    
+                    episode 05
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">org-mode</li>
+        
+        
+    
+        <li class="chapter " data-level="10.1" data-path="../org-mode/org-mode-pdf.html">
+            
+                <a href="../org-mode/org-mode-pdf.html">
+            
+                    
+                        <b>10.1.</b>
+                    
+                    org-mode与pdf
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">magit</li>
+        
+        
+    
+        <li class="chapter " data-level="11.1" data-path="../magit/faq.html">
+            
+                <a href="../magit/faq.html">
+            
+                    
+                        <b>11.1.</b>
+                    
+                    magit faq
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">irc</li>
+        
+        
+    
+        <li class="chapter " data-level="12.1" data-path="../irc/emacs-irc.html">
+            
+                <a href="../irc/emacs-irc.html">
+            
+                    
+                        <b>12.1.</b>
+                    
+                    emacs irc
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">未来</li>
+        
+        
+    
+        <li class="chapter " data-level="13.1" data-path="../learn/learn-how-to-learn.html">
+            
+                <a href="../learn/learn-how-to-learn.html">
+            
+                    
+                        <b>13.1.</b>
+                    
+                    learn how to learn
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">my emacs faq record</li>
+        
+        
+    
+        <li class="chapter " data-level="14.1" data-path="../learn/emacs-record.html">
+            
+                <a href="../learn/emacs-record.html">
+            
+                    
+                        <b>14.1.</b>
+                    
+                    my emacs record
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">相关资源</li>
+        
+        
+    
+        <li class="chapter " data-level="15.1" data-path="../emacs-reference.html">
+            
+                <a href="../emacs-reference.html">
+            
+                    
+                        <b>15.1.</b>
+                    
+                    emacs master configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >lazycat-emacs 初始化安装在ubuntu</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>ubuntu &#x9996;&#x6B21;&#x5B89;&#x88C5; lazycat &#x540E;&#x7684;&#x7B2C;&#x4E00;&#x6B21;&#x914D;&#x7F6E;&#x4FEE;&#x6539;</p>
+<h1 id="env">env</h1>
+<ul>
+<li>os: ubuntu 18.04</li>
+</ul>
+<h1 id="prerequirement">prerequirement</h1>
+<p><a href="lazycat-init-base-ubuntu">ubuntu &#x9996;&#x6B21;&#x5B89;&#x88C5; lazycat</a>
+<a href="../chemacs">chemacs&#x5FEB;&#x901F;&#x5207;&#x6362;emacs&#x914D;&#x7F6E;</a></p>
+<p>&#x4E0B;&#x9762;&#x5F00;&#x59CB;&#x4FEE;&#x6539;&#x914D;&#x7F6E;&#xFF0C;&#x4EE5;&#x8BA9;lazycat&#x8FD0;&#x884C;&#x8D77;&#x6765;.</p>
+<h1 id="emacs---dubug-init">emacs --dubug-init</h1>
+<pre class="language-"><code class="lang-bash">$ <span class="token function">cat</span> ~/.emacs-profiles.el
+<span class="token punctuation">;</span><span class="token punctuation">;</span> <span class="token variable"><span class="token punctuation">((</span>&quot;default&quot; . <span class="token punctuation">((</span>user<span class="token operator">-</span>emacs<span class="token operator">-</span>directory . &quot;<span class="token operator">~</span><span class="token operator">/</span>.emacs.d&quot;<span class="token punctuation">))</span></span><span class="token punctuation">))</span>
+<span class="token variable"><span class="token punctuation">((</span>&quot;default&quot; . <span class="token punctuation">((</span>user<span class="token operator">-</span>emacs<span class="token operator">-</span>directory . &quot;<span class="token operator">~</span><span class="token operator">/</span>.emacs.d&quot;<span class="token punctuation">))</span></span><span class="token punctuation">)</span>
+ <span class="token punctuation">(</span><span class="token string">&quot;spacemacs&quot;</span> <span class="token builtin class-name">.</span> <span class="token variable"><span class="token punctuation">((</span>user<span class="token operator">-</span>emacs<span class="token operator">-</span>directory . &quot;<span class="token operator">~</span><span class="token operator">/</span>spacemacs&quot;<span class="token punctuation">)</span>
+    <span class="token punctuation">(</span>env . <span class="token punctuation">((</span>&quot;SPACEMACSDIR&quot; . &quot;<span class="token operator">~</span><span class="token operator">/</span>.spacemacs.d&quot;<span class="token punctuation">))</span></span><span class="token punctuation">))</span><span class="token punctuation">)</span>
+ <span class="token punctuation">(</span><span class="token string">&quot;lazycat&quot;</span> <span class="token builtin class-name">.</span> <span class="token variable"><span class="token punctuation">((</span>user<span class="token operator">-</span>emacs<span class="token operator">-</span>directory . &quot;<span class="token operator">~</span><span class="token operator">/</span>lazycat<span class="token operator">-</span>emacs&quot;<span class="token punctuation">))</span></span><span class="token punctuation">)</span>
+ <span class="token punctuation">(</span><span class="token string">&quot;purcell&quot;</span> <span class="token builtin class-name">.</span> <span class="token variable"><span class="token punctuation">((</span>user<span class="token operator">-</span>emacs<span class="token operator">-</span>directory . &quot;<span class="token operator">~</span><span class="token operator">/</span>.emacs.d&quot;<span class="token punctuation">))</span></span><span class="token punctuation">)</span>
+<span class="token punctuation">)</span>
+$ <span class="token function">cat</span> ~/.emacs-profile
+lazycat
+$ <span class="token builtin class-name">cd</span> /usr/share/xxy-deepin-emacs/common/bin
+/usr/share/xxy-deepin-emacs/common/bin   127s
+$ ./emacs --debug-init
+</code></pre>
+<h1 id="font">font</h1>
+<ul>
+<li><a href="https://github.com/manateelazycat/lazycat-emacs/issues/17" target="_blank">https://github.com/manateelazycat/lazycat-emacs/issues/17</a></li>
+<li><a href="https://github.com/manateelazycat/lazycat-theme/blob/6d59ca1e01d450beae6603dd786f8e7bd4087826/lazycat-theme.el#L10" target="_blank">https://github.com/manateelazycat/lazycat-theme/blob/6d59ca1e01d450beae6603dd786f8e7bd4087826/lazycat-theme.el#L10</a></li>
+</ul>
+<p><code>./site-lisp/extensions/lazycat-theme/lazycat-theme.el</code> change the font:</p>
+<pre class="language-"><code>  (setq emacs-font-name &quot;Droid Sans Mono&quot;)))
+</code></pre><p>to</p>
+<pre class="language-"><code>  (setq emacs-font-name &quot;Source Code Pro&quot;)))
+</code></pre><p>Source Code Pro &#x53EF;&#x4EE5;&#x4E0B;&#x8F7D;&#xFF1A;</p>
+<pre class="language-"><code class="lang-bash"><span class="token function">git</span> clone https://github.com/eiuapp/dot-fonts
+</code></pre>
+<h1 id="initel">init.el</h1>
+<p>&#x542F;&#x52A8;&#x540E;&#xFF0C;&#x4F1A;&#x62A5; $HOME/lazycat-emacs/init.el &#x6587;&#x4EF6;&#x4E0D;&#x5B58;&#x5728;&#x3002;</p>
+<p>&#x628A;&#x4E0B;&#x9762;&#x5185;&#x5BB9;&#x590D;&#x5236;&#x4E00;&#x4E0B;&#xFF0C;&#x505A;&#x6210; $HOME/lazycat-emacs/init.el &#x6587;&#x4EF6;</p>
+<pre class="language-"><code>(defun add-subdirs-to-load-path (dir)
+  &quot;Recursive add directories to `load-path&apos;.&quot;
+  (let ((default-directory (file-name-as-directory dir)))
+    (add-to-list &apos;load-path dir)
+    (normal-top-level-add-subdirs-to-load-path)))
+;; (add-subdirs-to-load-path &quot;/usr/share/emacs/lazycat-u/&quot;)
+(add-subdirs-to-load-path &quot;/usr/share/emacs/lazycat/&quot;)
+
+(require &apos;init)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won&apos;t work right.
+ &apos;(hl-paren-colors (quote (&quot;#F72E70&quot; &quot;#2FBEFF&quot; &quot;#FF6E00&quot; &quot;#AF00FF&quot; &quot;#FF2700&quot;)))
+ &apos;(imaxima-bg-color &quot;black&quot;)
+ &apos;(imaxima-equation-color &quot;Green3&quot;)
+ &apos;(imaxima-fg-color &quot;DarkGreen&quot;)
+ &apos;(imaxima-fnt-size &quot;Large&quot;)
+ &apos;(imaxima-label-color &quot;slategrey&quot;)
+ &apos;(imaxima-max-scale 0.85)
+ &apos;(imaxima-pt-size 12)
+ &apos;(package-selected-packages (quote (w3m w3 edit-server)))
+ &apos;(smiley-style (quote medium))
+ &apos;(term-default-bg-color &quot;#000000&quot;)
+ &apos;(term-default-fg-color &quot;#dddd00&quot;)
+ &apos;(tramp-verbose 0 nil (tramp)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won&apos;t work right.
+ &apos;(default ((t (:background &quot;black&quot; :foreground &quot;#137D11&quot;))))
+ &apos;(ac-candidate-face ((t (:background &quot;#191919&quot; :foreground &quot;#878787&quot;))))
+ &apos;(ac-clang-candidate-face ((t (:background &quot;#191919&quot; :foreground &quot;#878787&quot;))))
+ &apos;(ac-clang-selection-face ((t (:background &quot;darkred&quot; :foreground &quot;grey&quot;))))
+ &apos;(ac-completion-face ((t (:foreground &quot;#878787&quot;))))
+ &apos;(ac-gtags-candidate-face ((t (:background &quot;#191919&quot; :foreground &quot;#878787&quot;))))
+ &apos;(ac-gtags-selection-face ((t (:background &quot;orangered4&quot; :foreground &quot;grey&quot;))))
+ &apos;(ac-menu-face ((t (:background &quot;Grey10&quot; :foreground &quot;Grey40&quot;))))
+ &apos;(ac-selection-face ((t (:background &quot;darkred&quot; :foreground &quot;grey&quot;))))
+ &apos;(ac-yasnippet-candidate-face ((t (:background &quot;#191919&quot; :foreground &quot;#878787&quot;))))
+ &apos;(ac-yasnippet-menu-face ((t (:background &quot;Grey10&quot; :foreground &quot;Grey40&quot;))))
+ &apos;(ac-yasnippet-selection-face ((t (:background &quot;darkgreen&quot; :foreground &quot;Grey&quot;))))
+ &apos;(ace-jump-face-foreground ((t (:background &quot;darkorange&quot; :foreground &quot;black&quot; :box (:line-width 1 :color &quot;#333333&quot;) :weight ultra-bold))))
+ &apos;(ascii-ascii-face ((((class color) (background dark)) (:background &quot;Black&quot; :foreground &quot;Grey&quot;))))
+ &apos;(ascii-non-ascii-face ((((class color) (background dark)) (:background &quot;Black&quot; :foreground &quot;Gold&quot;))))
+ &apos;(aw-leading-char-face ((t (:inherit ace-jump-face-foreground :height 1.5))))
+ &apos;(button ((t (:foreground &quot;deepskyblue3&quot; :underline t))))
+ &apos;(cal-china-x-priority1-holiday-face ((((class color) (background dark)) (:background &quot;DarkRed&quot; :foreground &quot;White&quot;))))
+ &apos;(cal-china-x-priority2-holiday-face ((((class color) (background dark)) (:background &quot;Khaki&quot; :foreground &quot;Black&quot;))))
+ &apos;(col-highlight ((t (:background &quot;Grey5&quot;))))
+ &apos;(comint-highlight-input ((t (:background &quot;black&quot; :foreground &quot;gold3&quot; :weight bold))))
+ &apos;(comint-highlight-prompt ((((min-colors 88) (background dark)) (:foreground &quot;Green&quot;))))
+ &apos;(company-preview ((t (:background &quot;#F94949&quot; :foreground &quot;white&quot;))))
+ &apos;(company-preview-common ((t (:background &quot;#F94949&quot; :foreground &quot;white&quot;))))
+ &apos;(company-preview-search ((t (:background &quot;green4&quot; :foreground &quot;green&quot;))))
+ &apos;(company-scrollbar-bg ((t (:background &quot;#303030&quot;))))
+ &apos;(company-scrollbar-fg ((t (:background &quot;#404040&quot;))))
+ &apos;(company-tooltip ((t (:background &quot;#202020&quot; :foreground &quot;grey&quot;))))
+ &apos;(company-tooltip-annotation ((t (:foreground &quot;gold&quot;))))
+ &apos;(company-tooltip-annotation-selection ((t (:foreground &quot;white&quot;))))
+ &apos;(company-tooltip-common ((t (:inherit company-tooltip :foreground &quot;#F94949&quot;))))
+ &apos;(company-tooltip-common-selection ((t (:background &quot;gray20&quot; :foreground &quot;#F94949&quot;))))
+ &apos;(company-tooltip-selection ((t (:background &quot;gray20&quot; :foreground &quot;#F94949&quot;))))
+ &apos;(completion-dynamic-face ((((class color) (background dark)) (:background &quot;DarkOrange&quot; :foreground &quot;black&quot;))))
+ &apos;(completion-tooltip-face ((t (:inherit tooltip :background &quot;grey5&quot; :foreground &quot;khaki1&quot;))))
+ &apos;(completions-common-part ((t (:foreground &quot;Green3&quot;))))
+ &apos;(completions-first-difference ((t (:foreground &quot;Grey60&quot;))))
+ &apos;(cursor ((t (:background &quot;red&quot;))))
+ &apos;(custom-button ((((type x w32 ns) (class color)) (:background &quot;black&quot; :foreground &quot;#EE8822&quot; :underline t))))
+ &apos;(custom-comment ((((class grayscale color) (background dark)) (:background &quot;grey5&quot; :foreground &quot;green&quot;))))
+ &apos;(custom-group-tag ((t (:inherit variable-pitch :foreground &quot;DodgerBlue&quot; :underline t :weight bold :height 1.2))))
+ &apos;(custom-link ((((type x w32 ns) (class color)) (:background &quot;black&quot; :foreground &quot;#EE8822&quot; :underline t))))
+ &apos;(custom-variable-tag ((t (:foreground &quot;gold&quot; :underline t :weight bold))))
+ &apos;(diff-header ((((class color) (min-colors 88) (background dark)) (:background &quot;grey30&quot; :foreground &quot;gold&quot;))))
+ &apos;(dired-directory ((t (:inherit font-lock-function-name-face :foreground &quot;DodgerBlue&quot;))))
+ &apos;(dired-header ((t (:inherit font-lock-type-face :foreground &quot;gold&quot;))))
+ &apos;(dired-ignored ((t (:inherit shadow :foreground &quot;grey50&quot;))))
+ &apos;(dired-symlink ((t (:inherit font-lock-keyword-face :foreground &quot;OrangeRed3&quot;))))
+ &apos;(diredp-date-time ((t (:foreground &quot;Grey60&quot;))))
+ &apos;(diredp-deletion ((t (:background &quot;Black&quot; :foreground &quot;red&quot;))))
+ &apos;(diredp-deletion-file-name ((t (:foreground &quot;red&quot;))))
+ &apos;(diredp-dir-heading ((t (:background &quot;Black&quot; :foreground &quot;Gold&quot;))))
+ &apos;(diredp-dir-priv ((t (:background &quot;Black&quot; :foreground &quot;DodgerBlue&quot;))))
+ &apos;(diredp-display-msg ((t (:foreground &quot;Gold&quot;))))
+ &apos;(diredp-exec-priv ((t (:background &quot;Black&quot; :foreground &quot;DeepSkyBlue3&quot;))))
+ &apos;(diredp-file-name ((t (:foreground &quot;#30A339&quot;))))
+ &apos;(diredp-file-suffix ((t (:foreground &quot;Green4&quot;))))
+ &apos;(diredp-flag-mark ((t (:background &quot;Black&quot; :foreground &quot;Cyan&quot;))))
+ &apos;(diredp-flag-mark-line ((t (:background &quot;Black&quot; :foreground &quot;Cyan&quot;))))
+ &apos;(diredp-ignored-file-name ((t (:foreground &quot;grey40&quot;))))
+ &apos;(diredp-no-priv ((t (:background &quot;Black&quot; :foreground &quot;Green&quot;))))
+ &apos;(diredp-other-priv ((t (:background &quot;Black&quot; :foreground &quot;khaki&quot;))))
+ &apos;(diredp-rare-priv ((t (:background &quot;Black&quot; :foreground &quot;Red&quot;))))
+ &apos;(diredp-read-priv ((t (:background &quot;Black&quot; :foreground &quot;IndianRed&quot;))))
+ &apos;(diredp-write-priv ((t (:background &quot;Black&quot; :foreground &quot;Gold3&quot;))))
+ &apos;(egg-diff-hunk-header ((((class color) (background dark)) (:background &quot;grey30&quot; :foreground &quot;Gold&quot;))))
+ &apos;(egg-log-HEAD ((t (:background &quot;Black&quot; :foreground &quot;Red&quot;))))
+ &apos;(egg-text-help ((t (:inherit egg-text-base :height 0.9))))
+ &apos;(eldoc-highlight-function-argument ((t (:inherit bold :foreground &quot;Red&quot;))))
+ &apos;(elscreen-tab-background-face ((((type x w32 mac) (class color)) (:background &quot;Black&quot;))))
+ &apos;(elscreen-tab-control-face ((((type x w32 mac) (class color)) (:background &quot;Black&quot; :foreground &quot;Green&quot;))))
+ &apos;(elscreen-tab-current-screen-face ((((class color)) (:background &quot;DarkRed&quot; :foreground &quot;Grey&quot; :box (:line-width -1 :color &quot;Red&quot; :style released-button)))))
+ &apos;(elscreen-tab-other-screen-face ((((type x w32 mac) (class color)) (:background &quot;Black&quot; :foreground &quot;Green3&quot; :box (:line-width -1 :color &quot;Grey20&quot; :style released-button)))))
+ &apos;(emmet-preview-input ((t (:foreground &quot;gold&quot; :underline t))))
+ &apos;(emmet-preview-output ((t (:background &quot;gray10&quot; :foreground &quot;grey80&quot;))))
+ &apos;(emms-browser-album-face ((((class color) (background dark)) (:foreground &quot;Green3&quot; :height 1.1))))
+ &apos;(emms-browser-artist-face ((((class color) (background dark)) (:foreground &quot;Gold3&quot; :height 1.3))))
+ &apos;(emms-browser-track-face ((((class color) (background dark)) (:foreground &quot;khaki3&quot; :height 1.0))))
+ &apos;(emms-playlist-selected-face ((t (:foreground &quot;Green&quot;))))
+ &apos;(emms-playlist-track-face ((t (:foreground &quot;DarkGreen&quot;))))
+ &apos;(epe-dir-face ((t (:foreground &quot;green3&quot;))))
+ &apos;(epe-git-face ((t (:foreground &quot;systemRedColor&quot;))))
+ &apos;(epe-pipeline-delimiter-face ((t (:foreground &quot;green4&quot;))))
+ &apos;(epe-pipeline-host-face ((t (:foreground &quot;systemGreenColor&quot;))))
+ &apos;(epe-pipeline-time-face ((t (:foreground &quot;systemGrayColor&quot;))))
+ &apos;(epe-pipeline-user-face ((t (:foreground &quot;gold&quot;))))
+ &apos;(eperiodic-d-block-face ((((class color) (background dark)) (:inherit eperiodic-generic-block-face :background &quot;DarkRed&quot; :foreground &quot;White&quot;))))
+ &apos;(eperiodic-f-block-face ((((class color) (background dark)) (:inherit eperiodic-generic-block-face :background &quot;DarkRed&quot; :foreground &quot;Grey&quot;))))
+ &apos;(eperiodic-generic-block-face ((((class color)) nil)))
+ &apos;(eperiodic-group-number-face ((t (:inherit eperiodic-generic-block-face :foreground &quot;grey&quot; :weight bold))))
+ &apos;(eperiodic-header-face ((t (:foreground &quot;Gold&quot; :weight bold))))
+ &apos;(eperiodic-p-block-face ((((class color)) (:inherit eperiodic-generic-block-face :background &quot;Green4&quot; :foreground &quot;Grey&quot;))))
+ &apos;(eperiodic-period-number-face ((t (:foreground &quot;grey&quot; :weight bold))))
+ &apos;(eperiodic-s-block-face ((((class color)) (:inherit eperiodic-generic-block-face :background &quot;tan3&quot; :foreground &quot;cornsilk2&quot;))))
+ &apos;(erc-direct-msg-face ((t (:foreground &quot;DodgerBlue&quot;))))
+ &apos;(erc-input-face ((t (:foreground &quot;Green2&quot;))))
+ &apos;(erc-my-nick-face ((t (:foreground &quot;DarkRed&quot; :weight bold))))
+ &apos;(erc-notice-face ((t (:foreground &quot;Gray20&quot; :weight bold))))
+ &apos;(erc-prompt-face ((t (:background &quot;Black&quot; :foreground &quot;Gold&quot; :weight bold))))
+ &apos;(erm-syn-errline ((t (:background &quot;black&quot; :foreground &quot;red&quot; :underline t))))
+ &apos;(erm-syn-warnline ((t (:background &quot;black&quot; :foreground &quot;yellow&quot; :underline nil))))
+ &apos;(feebleline-git-branch-face ((t (:foreground &quot;gray35&quot;))))
+ &apos;(feebleline-linum-face ((t (:foreground &quot;gray35&quot;))))
+ &apos;(feebleline-time-face ((t (:foreground &quot;gray35&quot;))))
+ &apos;(fixme-face ((t (:foreground &quot;orange&quot; :box (:line-width 1 :color &quot;orange&quot;) :weight bold))))
+ &apos;(flycheck-error-list-highlight ((t (:foreground &quot;orange red&quot;))))
+ &apos;(flycheck-posframe-error-face ((t (:background &quot;gray12&quot; :foreground &quot;red3&quot; :box (:line-width 1 :color &quot;grey20&quot;)))))
+ &apos;(flycheck-posframe-face ((t (:inherit default :foreground &quot;gold&quot;))))
+ &apos;(flycheck-posframe-info-face ((t (:inherit flycheck-posframe-face :background &quot;gray12&quot; :box (:line-width 1 :color &quot;grey20&quot;)))))
+ &apos;(font-lock-builtin-face ((((class color) (min-colors 88) (background dark)) (:foreground &quot;#FF6666&quot;))))
+ &apos;(font-lock-comment-face ((((class color) (min-colors 88) (background dark)) (:foreground &quot;gray30&quot;))))
+ &apos;(font-lock-constant-face ((((class color) (min-colors 88) (background dark)) (:foreground &quot;#E73C70&quot;))))
+ &apos;(font-lock-doc-face ((t (:inherit font-lock-string-face :foreground &quot;#999999&quot;))))
+ &apos;(font-lock-function-name-face ((((class color) (min-colors 88) (background dark)) (:foreground &quot;#F94949&quot;))))
+ &apos;(font-lock-keyword-face ((((class color) (min-colors 88) (background dark)) (:foreground &quot;#EE8822&quot;))))
+ &apos;(font-lock-preprocessor-face ((t (:inherit font-lock-builtin-face :foreground &quot;Cyan3&quot; :weight bold))))
+ &apos;(font-lock-string-face ((((class color) (min-colors 88) (background dark)) (:foreground &quot;#DFD67A&quot;))))
+ &apos;(font-lock-type-face ((((class color) (min-colors 88) (background dark)) (:foreground &quot;#E73C70&quot;))))
+ &apos;(font-lock-variable-name-face ((((class color) (min-colors 88) (background dark)) (:foreground &quot;#F94949&quot;))))
+ &apos;(font-lock-warning-face ((((class color) (min-colors 88) (background dark)) (:foreground &quot;red&quot; :weight bold))))
+ &apos;(fringe ((((class color) (background dark)) (:background &quot;gray3&quot;))))
+ &apos;(gnus-button ((t (:foreground &quot;khaki3&quot; :weight bold))))
+ &apos;(gnus-cite-1 ((((class color) (background dark)) (:foreground &quot;Grey50&quot;))))
+ &apos;(gnus-header-content ((t (:foreground &quot;Green&quot; :slant italic))))
+ &apos;(gnus-header-from ((((class color) (background dark)) (:foreground &quot;khaki&quot;))))
+ &apos;(gnus-header-name ((((class color) (background dark)) (:foreground &quot;DodgerBlue&quot;))))
+ &apos;(gnus-header-subject ((((class color) (background dark)) (:foreground &quot;HotPink&quot;))))
+ &apos;(gnus-signature ((t (:foreground &quot;Orange&quot; :slant italic))))
+ &apos;(gnus-summary-high-ancient ((t (:foreground &quot;Grey50&quot; :weight bold))))
+ &apos;(gnus-summary-high-read ((t (:foreground &quot;Gold2&quot; :weight bold))))
+ &apos;(gnus-summary-low-ancient ((t (:foreground &quot;Grey10&quot; :slant italic))))
+ &apos;(gnus-summary-low-read ((t (:foreground &quot;Gold4&quot; :slant italic))))
+ &apos;(gnus-summary-normal-ancient ((((class color) (background dark)) (:foreground &quot;Grey40&quot;))))
+ &apos;(gnus-summary-normal-read ((((class color) (background dark)) (:foreground &quot;khaki2&quot;))))
+ &apos;(go-to-char-highlight ((((class color) (background dark)) (:background &quot;Pink&quot; :foreground &quot;Black&quot;))))
+ &apos;(header-line ((t (:background &quot;Black&quot; :foreground &quot;Green&quot;))))
+ &apos;(helm-buffer-directory ((t (:foreground &quot;DodgerBlue&quot;))))
+ &apos;(helm-ff-directory ((t (:background &quot;black&quot; :foreground &quot;dodgerblue&quot;))))
+ &apos;(helm-ff-dotted-directory ((t (:foreground &quot;DodgerBlue&quot;))))
+ &apos;(helm-ff-dotted-symlink-directory ((t (:foreground &quot;DarkOrange&quot;))))
+ &apos;(helm-ff-file ((t (:background &quot;black&quot; :foreground &quot;darkgreen&quot;))))
+ &apos;(helm-ff-invalid-symlink ((t (:background &quot;black&quot; :foreground &quot;red&quot;))))
+ &apos;(helm-ff-prefix ((t (:background &quot;black&quot; :foreground &quot;yellow&quot;))))
+ &apos;(helm-ff-symlink ((t (:foreground &quot;DarkOrange4&quot;))))
+ &apos;(helm-selection ((t (:background &quot;darkred&quot; :foreground &quot;grey&quot;))))
+ &apos;(helm-source-header ((t (:background &quot;black&quot; :foreground &quot;gold&quot; :underline t :height 1.1))))
+ &apos;(helm-visible-mark ((t (:background &quot;darkgreen&quot; :foreground &quot;grey&quot;))))
+ &apos;(highlight ((((class color) (min-colors 88) (background dark)) (:background &quot;DarkRed&quot; :foreground &quot;White&quot;))))
+ &apos;(highlight-cl ((t (:foreground &quot;#20ABFC&quot; :underline nil))))
+ &apos;(highlight-cl-and-other ((t (:foreground &quot;#20ABFC&quot; :underline nil))))
+ &apos;(highlight-cl-macro ((t (:underline nil))))
+ &apos;(highlight-symbol-face ((((class color) (background dark)) (:background &quot;grey&quot; :foreground &quot;white&quot;))))
+ &apos;(hl-line ((t (:background &quot;grey13&quot;))))
+ &apos;(hl-sexp-face ((((class color) (background dark)) (:background &quot;gray2&quot;))))
+ &apos;(hs-face ((t (:background &quot;DarkRed&quot; :foreground &quot;grey&quot; :box (:line-width 1 :color &quot;grey50&quot;)))))
+ &apos;(hs-fringe-face ((t (:background &quot;DarkRed&quot; :foreground &quot;grey&quot; :box (:line-width 2 :color &quot;grey75&quot; :style released-button)))))
+ &apos;(icicle-candidate-part ((((background dark)) (:background &quot;Black&quot; :foreground &quot;Purple&quot;))))
+ &apos;(icicle-complete-input ((((background dark)) (:foreground &quot;Gold&quot;))))
+ &apos;(icicle-completion ((((background dark)) (:foreground &quot;Gold&quot;))))
+ &apos;(icicle-current-candidate-highlight ((((background dark)) (:background &quot;DarkRed&quot; :foreground &quot;White&quot;))))
+ &apos;(icicle-input-completion-fail ((((background dark)) (:background &quot;DarkRed&quot; :foreground &quot;White&quot;))))
+ &apos;(icicle-input-completion-fail-lax ((((background dark)) (:background &quot;khaki&quot; :foreground &quot;Black&quot;))))
+ &apos;(icicle-match-highlight-Completions ((((background dark)) (:foreground &quot;DodgerBlue1&quot;))))
+ &apos;(icicle-multi-command-completion ((((background dark)) (:foreground &quot;Gold&quot;))))
+ &apos;(icicle-mustmatch-completion ((((type x w32 mac graphic) (class color)) (:inherit nil))))
+ &apos;(icicle-saved-candidate ((((background dark)) (:background &quot;Black&quot; :foreground &quot;khaki&quot;))))
+ &apos;(icicle-special-candidate ((((background dark)) (:background &quot;Black&quot; :foreground &quot;Grey&quot;))))
+ &apos;(icicle-whitespace-highlight ((((background dark)) (:background &quot;DarkRed&quot;))))
+ &apos;(info-elisp-command-ref-item ((t (:background &quot;Black&quot; :foreground &quot;yellow3&quot;))))
+ &apos;(info-elisp-function-ref-item ((t (:background &quot;Black&quot; :foreground &quot;Gold3&quot;))))
+ &apos;(info-elisp-macro-ref-item ((t (:background &quot;Black&quot; :foreground &quot;Yellow3&quot;))))
+ &apos;(info-elisp-reference-item ((t (:background &quot;Black&quot; :foreground &quot;DarkRed&quot;))))
+ &apos;(info-elisp-special-form-ref-item ((t (:background &quot;Black&quot; :foreground &quot;OrangeRed2&quot;))))
+ &apos;(info-elisp-syntax-class-item ((t (:background &quot;Black&quot; :foreground &quot;Khaki3&quot;))))
+ &apos;(info-elisp-user-option-ref-item ((t (:background &quot;Black&quot; :foreground &quot;LawnGreen&quot;))))
+ &apos;(info-elisp-variable-ref-item ((t (:background &quot;Black&quot; :foreground &quot;#0048FF&quot;))))
+ &apos;(info-file ((t (:background &quot;Black&quot; :foreground &quot;Blue&quot;))))
+ &apos;(info-menu ((t (:foreground &quot;DarkRed&quot;))))
+ &apos;(info-menu-header ((t (:inherit variable-pitch :foreground &quot;khaki3&quot; :weight bold))))
+ &apos;(info-quoted-name ((t (:foreground &quot;Purple&quot;))))
+ &apos;(info-string ((t (:foreground &quot;Grey50&quot;))))
+ &apos;(info-title-1 ((t (:inherit info-title-2 :foreground &quot;Gold&quot; :height 1.1))))
+ &apos;(info-title-2 ((t (:inherit info-title-3 :foreground &quot;red&quot; :height 1.1))))
+ &apos;(info-title-3 ((t (:inherit info-title-4 :foreground &quot;DodgerBlue&quot; :height 1.1))))
+ &apos;(info-title-4 ((t (:inherit variable-pitch :foreground &quot;Green&quot; :weight bold))))
+ &apos;(isearch ((((class color) (min-colors 88) (background dark)) (:background &quot;brown&quot; :foreground &quot;white&quot;))))
+ &apos;(isearch-fail ((((class color) (min-colors 88) (background dark)) (:background &quot;red4&quot; :foreground &quot;white&quot;))))
+ &apos;(italic ((t (:underline nil :slant normal))))
+ &apos;(lazy-highlight ((((class color) (min-colors 88) (background dark)) (:background &quot;grey20&quot;))))
+ &apos;(line-number ((t (:background &quot;black&quot; :foreground &quot;gray35&quot;))))
+ &apos;(line-number-current-line ((t (:background &quot;black&quot; :foreground &quot;gray70&quot;))))
+ &apos;(magit-blame-heading ((t (:foreground &quot;tan4&quot; :slant normal :weight normal))))
+ &apos;(magit-blame-highlight ((t (:foreground &quot;tan4&quot;))))
+ &apos;(magit-branch-current ((t (:foreground &quot;Dodgerblue&quot; :weight extra-bold))))
+ &apos;(magit-branch-remote-head ((t (:foreground &quot;tan3&quot; :weight extra-bold))))
+ &apos;(magit-diff-add ((t (:foreground &quot;DodgerBlue1&quot;))))
+ &apos;(magit-diff-added ((t (:foreground &quot;gold&quot;))))
+ &apos;(magit-diff-added-highlight ((t (:foreground &quot;gold&quot;))))
+ &apos;(magit-diff-base ((t (:foreground &quot;#ffffcc&quot;))))
+ &apos;(magit-diff-base-highlight ((t (:foreground &quot;#eeeebb&quot;))))
+ &apos;(magit-diff-context ((t (:foreground &quot;green3&quot;))))
+ &apos;(magit-diff-context-highlight ((t (:foreground &quot;green3&quot;))))
+ &apos;(magit-diff-file-heading-highlight ((t (:foreground &quot;green2&quot;))))
+ &apos;(magit-diff-hunk-heading ((t (:foreground &quot;grey70&quot;))))
+ &apos;(magit-diff-hunk-heading-highlight ((t (:foreground &quot;grey70&quot;))))
+ &apos;(magit-diff-lines-boundary ((t (:foreground &quot;rosybrown4&quot;))))
+ &apos;(magit-diff-lines-heading ((t (:foreground &quot;rosybrown4&quot;))))
+ &apos;(magit-diff-removed ((t (:foreground &quot;red2&quot;))))
+ &apos;(magit-diff-removed-highlight ((t (:foreground &quot;darkred&quot;))))
+ &apos;(magit-diff-whitespace-warning ((t (:background &quot;red3&quot; :foreground &quot;white&quot;))))
+ &apos;(magit-item-highlight ((t (:background &quot;#333333&quot; :foreground &quot;lawn green&quot;))))
+ &apos;(magit-log-head-label ((t (:foreground &quot;orange&quot;))))
+ &apos;(magit-log-tag-label ((t (:foreground &quot;gold&quot;))))
+ &apos;(magit-section-highlight ((t (:background &quot;grey20&quot; :foreground &quot;green&quot;))))
+ &apos;(match ((((class color) (min-colors 88) (background dark)) (:background &quot;Black&quot; :foreground &quot;Grey70&quot; :weight extra-bold))))
+ &apos;(message-header-subject ((t (:foreground &quot;gold&quot; :weight bold))))
+ &apos;(message-header-to ((t (:foreground &quot;DarkRed&quot; :weight bold))))
+ &apos;(minibuffer-prompt ((((background dark)) (:foreground &quot;green&quot;))))
+ &apos;(mm-uu-extract ((((class color) (background dark)) (:background &quot;Black&quot; :foreground &quot;Gold3&quot;))))
+ &apos;(modelinepos-column-warning ((t (:foreground &quot;Yellow&quot;))))
+ &apos;(newsticker-date-face ((t (:foreground &quot;red&quot; :slant italic :height 0.8))))
+ &apos;(newsticker-default-face ((((class color) (background dark)) (:inherit default))))
+ &apos;(newsticker-enclosure-face ((t (:background &quot;orange&quot; :weight bold))))
+ &apos;(newsticker-extra-face ((t (:foreground &quot;gray50&quot; :slant italic :height 0.9))))
+ &apos;(newsticker-feed-face ((t (:foreground &quot;Green&quot; :weight bold :height 1.2))))
+ &apos;(newsticker-immortal-item-face ((t (:foreground &quot;green&quot; :slant italic :weight bold))))
+ &apos;(newsticker-new-item-face ((t (:foreground &quot;Gold&quot; :weight bold))))
+ &apos;(newsticker-obsolete-item-face ((t (:strike-through t :weight bold))))
+ &apos;(newsticker-old-item-face ((t (:foreground &quot;purple&quot; :weight bold))))
+ &apos;(newsticker-statistics-face ((t (:foreground &quot;red&quot; :slant italic :height 0.8))))
+ &apos;(newsticker-treeview-face ((t (:foreground &quot;Green4&quot; :weight normal))))
+ &apos;(newsticker-treeview-new-face ((t (:inherit newsticker-treeview-face :foreground &quot;DodgerBlue&quot; :weight bold))))
+ &apos;(newsticker-treeview-old-face ((((class color) (background dark)) (:inherit newsticker-treeview-face :foreground &quot;purple&quot;))))
+ &apos;(newsticker-treeview-selection-face ((((class color) (background dark)) (:background &quot;DarkRed&quot; :foreground &quot;White&quot;))))
+ &apos;(org-date ((((class color) (background dark)) (:foreground &quot;ivory4&quot; :underline t))))
+ &apos;(org-ellipsis ((((class color) (background dark)) (:background &quot;black&quot; :foreground &quot;Cyan&quot; :strike-through nil))))
+ &apos;(org-hide ((((background dark)) (:foreground &quot;black&quot;))))
+ &apos;(org-level-3 ((t (:inherit outline-3 :foreground &quot;DeepSkyBlue&quot;))))
+ &apos;(org-level-5 ((t (:inherit outline-5 :foreground &quot;VioletRed3&quot;))))
+ &apos;(org-level-6 ((t (:inherit outline-6 :foreground &quot;violet&quot;))))
+ &apos;(org-level-7 ((t (:inherit outline-7 :foreground &quot;khaki3&quot;))))
+ &apos;(org-level-8 ((t (:inherit outline-8 :foreground &quot;DarkSeaGreen&quot;))))
+ &apos;(org-link ((((class color) (background dark)) (:foreground &quot;Cyan&quot;))))
+ &apos;(org-special-keyword ((((class color) (min-colors 16) (background dark)) (:foreground &quot;rosybrown1&quot;))))
+ &apos;(org-todo ((t (:foreground &quot;Red&quot; :weight bold))))
+ &apos;(pabbrev-suggestions-face ((((class color) (background dark)) (:background &quot;Black&quot; :foreground &quot;khaki1&quot;))))
+ &apos;(pabbrev-suggestions-label-face ((t (:background &quot;Black&quot; :foreground &quot;Grey&quot; :inverse-video nil))))
+ &apos;(popup-isearch-match ((t (:background &quot;#191919&quot; :foreground &quot;#ffffff&quot;))))
+ &apos;(popup-menu-mouse-face ((t (:background &quot;gold&quot; :foreground &quot;white&quot;))))
+ &apos;(popup-menu-summary-face ((t (:background &quot;#191919&quot; :foreground &quot;grey&quot;))))
+ &apos;(popup-scroll-bar-background-face ((t (:background &quot;#191919&quot;))))
+ &apos;(popup-scroll-bar-foreground-face ((t (:background &quot;#393939&quot;))))
+ &apos;(popup-summary-face ((t (:background &quot;#191919&quot; :foreground &quot;grey&quot;))))
+ &apos;(rcirc-bright-nick ((((class color) (min-colors 88) (background dark)) (:foreground &quot;White&quot;))))
+ &apos;(rcirc-dim-nick ((t (:foreground &quot;Grey25&quot;))))
+ &apos;(rcirc-keyword ((t (:foreground &quot;khaki&quot; :slant normal :weight ultra-bold))))
+ &apos;(rcirc-my-nick ((((class color) (min-colors 88) (background dark)) (:foreground &quot;Green3&quot; :weight semi-bold))))
+ &apos;(rcirc-nick-in-message ((((class color) (min-colors 88) (background dark)) (:foreground &quot;Gold&quot;))))
+ &apos;(rcirc-nick-in-message-full-line ((t (:underline &quot;grey20&quot;))))
+ &apos;(rcirc-other-nick ((((class color) (min-colors 88) (background dark)) (:foreground &quot;tomato&quot;))))
+ &apos;(rcirc-prompt ((((min-colors 88) (background dark)) (:foreground &quot;Purple&quot;))))
+ &apos;(rcirc-server ((((class color) (min-colors 88) (background dark)) (:foreground &quot;DarkRed&quot;))))
+ &apos;(rcirc-server-prefix ((default (:foreground &quot;khaki4&quot;)) (((class color) (min-colors 16)) nil)))
+ &apos;(rcirc-timestamp ((t (:foreground &quot;grey35&quot;))))
+ &apos;(rcirc-track-keyword ((t (:foreground &quot;Yellow&quot; :weight bold))))
+ &apos;(rcirc-track-nick ((t (:foreground &quot;Green&quot;))))
+ &apos;(rcirc-url ((t (:foreground &quot;Grey50&quot; :weight ultra-light))))
+ &apos;(reb-match-0 ((((class color) (background dark)) (:background &quot;khaki3&quot; :foreground &quot;Black&quot;))))
+ &apos;(reb-match-1 ((((class color) (background dark)) (:background &quot;dodgerblue3&quot; :foreground &quot;black&quot;))))
+ &apos;(reb-match-2 ((((class color) (background dark)) (:background &quot;chartreuse3&quot; :foreground &quot;black&quot;))))
+ &apos;(reb-match-3 ((((class color) (background dark)) (:background &quot;sienna3&quot; :foreground &quot;black&quot;))))
+ &apos;(region ((((class color) (min-colors 88) (background dark)) (:background &quot;green4&quot; :foreground &quot;black&quot;))))
+ &apos;(rfcview-headlink-face ((t (:foreground &quot;DodgerBlue&quot;))))
+ &apos;(rfcview-headname-face ((t (:foreground &quot;DarkRed&quot; :underline t :weight bold))))
+ &apos;(rfcview-headnum-face ((t (:foreground &quot;DarkRed&quot; :weight bold))))
+ &apos;(rfcview-mouseover-face ((t (:background &quot;DarkRed&quot; :foreground &quot;white&quot; :weight bold))))
+ &apos;(rfcview-rfcnum-face ((t (:foreground &quot;Green3&quot; :weight bold))))
+ &apos;(rfcview-stdnum-face ((t (:foreground &quot;Grey&quot; :weight bold))))
+ &apos;(rfcview-title-face ((t (:foreground &quot;Gold&quot; :weight bold))))
+ &apos;(rg-file-tag-face ((t (:foreground &quot;blue&quot;))))
+ &apos;(rg-filename-face ((t (:foreground &quot;purple&quot;))))
+ &apos;(rg-info-face ((t (:foreground &quot;green&quot;))))
+ &apos;(rg-match-face ((t (:foreground &quot;gold&quot;))))
+ &apos;(secondary-selection ((((class color) (min-colors 88) (background dark)) (:background &quot;Black&quot;))))
+ &apos;(show-paren-match ((((class color) (background dark)) (:background &quot;green&quot; :foreground &quot;black&quot;))))
+ &apos;(show-paren-mismatch ((((class color)) (:background &quot;red&quot; :foreground &quot;white&quot;))))
+ &apos;(showtip-face ((((class color)) (:inherit tooltip :background &quot;darkred&quot; :foreground &quot;white&quot; :height 1.4))))
+ &apos;(speedbar-file-face ((((class color) (background dark)) (:foreground &quot;SeaGreen2&quot;))))
+ &apos;(speedbar-highlight-face ((((class color) (background dark)) (:background &quot;LightGoldenrod&quot; :foreground &quot;black&quot;))))
+ &apos;(speedbar-selected-face ((((class color) (background dark)) (:foreground &quot;Cyan&quot; :underline t))))
+ &apos;(speedbar-separator-face ((((class color) (background dark)) (:background &quot;DarkRed&quot; :foreground &quot;white&quot; :overline &quot;gray&quot;))))
+ &apos;(tooltip ((((class color)) (:inherit variable-pitch :background &quot;DarkRed&quot; :foreground &quot;White&quot;))))
+ &apos;(top-mode-mark-face (quote isearch))
+ &apos;(vr/group-0 ((t (:background &quot;red&quot; :foreground &quot;black&quot;))))
+ &apos;(vr/group-1 ((t (:background &quot;gold2&quot; :foreground &quot;black&quot;))))
+ &apos;(vr/group-2 ((t (:background &quot;dodgerblue&quot; :foreground &quot;black&quot;))))
+ &apos;(vr/match-0 ((t (:background &quot;green4&quot; :foreground &quot;black&quot;))))
+ &apos;(vr/match-1 ((t (:background &quot;green4&quot; :foreground &quot;black&quot;))))
+ &apos;(w3m-anchor ((((class color) (background dark)) (:foreground &quot;DodgerBlue2&quot; :underline t))))
+ &apos;(w3m-arrived-anchor ((((class color) (background dark)) (:foreground &quot;Purple4&quot; :underline t))))
+ &apos;(w3m-bold ((t (:foreground &quot;Green3&quot; :weight bold))))
+ &apos;(w3m-current-anchor ((t (:box (:line-width -1 :color &quot;Grey30&quot;) :underline t))))
+ &apos;(w3m-form ((((class color) (background dark)) (:foreground &quot;Red&quot; :box nil :underline &quot;DarkRed&quot;))))
+ &apos;(w3m-form-button ((((type x w32 mac) (class color)) (:background &quot;black&quot; :foreground &quot;LawnGreen&quot; :box (:line-width -1 :color &quot;#014500&quot; :style released-button)))))
+ &apos;(w3m-form-button-mouse ((((type x w32 mac) (class color)) (:background &quot;Black&quot; :foreground &quot;Red&quot; :box (:line-width -1 :color &quot;Grey30&quot; :style released-button)))))
+ &apos;(w3m-form-button-pressed ((((type x w32 mac) (class color)) (:background &quot;Black&quot; :foreground &quot;DarkRed&quot; :box (:line-width -1 :color &quot;Grey60&quot; :style pressed-button)))))
+ &apos;(w3m-form-face ((((class color) (background dark)) (:foreground &quot;khaki2&quot; :underline &quot;brown&quot;))) t)
+ &apos;(w3m-header-line-location-content ((((class color) (background dark)) (:background &quot;black&quot; :foreground &quot;Green&quot;))))
+ &apos;(w3m-header-line-location-title ((((class color) (background dark)) (:background &quot;black&quot; :foreground &quot;brown&quot;))))
+ &apos;(w3m-history-current-url ((t (:background &quot;black&quot; :foreground &quot;DodgerBlue&quot;))))
+ &apos;(w3m-image ((((class color) (background dark)) (:background &quot;Black&quot; :foreground &quot;DarkRed&quot;))))
+ &apos;(w3m-image-anchor ((((class color) (background dark)) (:background &quot;Black&quot;))))
+ &apos;(w3m-link-numbering ((((class color) (background dark)) (:background &quot;Black&quot; :foreground &quot;Grey&quot;))))
+ &apos;(w3m-session-select ((((class color) (background dark)) (:foreground &quot;grey50&quot;))))
+ &apos;(w3m-tab-background ((((type x w32 mac) (class color)) (:background &quot;black&quot; :foreground &quot;black&quot;))))
+ &apos;(w3m-tab-mouse ((((type x w32 mac) (class color)) (:background &quot;DarkRed&quot; :foreground &quot;white&quot; :box (:line-width -1 :color &quot;Red&quot; :style released-button)))))
+ &apos;(w3m-tab-selected ((t (:inherit tabbar-default :background &quot;black&quot; :foreground &quot;green2&quot; :box (:line-width 1 :color &quot;#10650F&quot;)))))
+ &apos;(w3m-tab-selected-background ((((type x w32 mac) (class color)) (:background &quot;black&quot; :foreground &quot;black&quot;))))
+ &apos;(w3m-tab-selected-retrieving ((((type x w32 mac) (class color)) (:background &quot;black&quot; :foreground &quot;grey80&quot; :box (:line-width -1 :color &quot;Grey40&quot; :style released-button)))))
+ &apos;(w3m-tab-unselected ((t (:inherit tabbar-default :background &quot;black&quot; :foreground &quot;#10650F&quot; :box (:line-width 1 :color &quot;#10650F&quot;)))))
+ &apos;(w3m-tab-unselected-retrieving ((t (:inherit tabbar-default :background &quot;black&quot; :foreground &quot;grey30&quot; :box (:line-width 1 :color &quot;grey30&quot;)))))
+ &apos;(w3m-tab-unselected-unseen ((t (:inherit tabbar-default :background &quot;black&quot; :foreground &quot;DodgerBlue&quot; :box (:line-width 1 :color &quot;#10650F&quot;)))))
+ &apos;(web-mode-block-attr-name-face ((t (:foreground &quot;#51D117&quot;))))
+ &apos;(web-mode-block-face ((t (:background &quot;black&quot;))))
+ &apos;(web-mode-comment-face ((t (:foreground &quot;gray30&quot;))))
+ &apos;(web-mode-doctype-face ((t (:foreground &quot;Grey50&quot;))))
+ &apos;(web-mode-html-attr-equal-face ((t (:foreground &quot;grey50&quot;))))
+ &apos;(web-mode-html-attr-name-face ((t (:foreground &quot;#51D117&quot;))))
+ &apos;(web-mode-html-tag-bracket-face ((t (:foreground &quot;grey50&quot;))))
+ &apos;(web-mode-html-tag-face ((t (:foreground &quot;#D10B4C&quot;))))
+ &apos;(which-func ((((class color) (min-colors 88) (background dark)) (:foreground &quot;Yellow&quot;))))
+ &apos;(whitespace-highlight ((((class color) (background dark)) (:background &quot;yellow2&quot; :foreground &quot;black&quot;))))
+ &apos;(widget-field ((((class grayscale color) (background dark)) (:background &quot;grey10&quot; :foreground &quot;DeepSkyBlue&quot;))))
+ &apos;(widget-single-line-field ((((class grayscale color) (background dark)) (:background &quot;grey10&quot; :foreground &quot;DeepSkyBlue&quot;))))
+ &apos;(woman-addition ((t (:foreground &quot;Gold3&quot;))))
+ &apos;(woman-bold ((((background dark)) (:foreground &quot;Green3&quot; :weight bold))))
+ &apos;(woman-italic ((((background dark)) (:foreground &quot;DarkRed&quot; :underline t))))
+ &apos;(woman-unknown ((((min-colors 88) (background dark)) (:foreground &quot;Cyan3&quot;))))
+ &apos;(xgtags-file-face ((((class color) (background dark)) (:foreground &quot;Grey50&quot;))))
+ &apos;(xgtags-file-selected-face ((t (:foreground &quot;Grey70&quot; :weight bold))))
+ &apos;(xgtags-line-face ((((class color) (background dark)) (:foreground &quot;khaki4&quot;))))
+ &apos;(xgtags-line-number-face ((((class color) (background dark)) (:foreground &quot;DarkRed&quot;))))
+ &apos;(xgtags-line-number-selected-face ((t (:foreground &quot;Red&quot; :weight bold))))
+ &apos;(xgtags-line-selected-face ((t (:foreground &quot;khaki&quot;))))
+ &apos;(xgtags-match-face ((((class color) (background dark)) (:foreground &quot;Green4&quot;))))
+ &apos;(xgtags-match-selected-face ((t (:foreground &quot;Green&quot; :weight bold))))
+ &apos;(xref-keyword-face ((t (:foreground &quot;grey&quot;))) t)
+ &apos;(xref-list-pilot-face ((t (:foreground &quot;gold&quot;))) t)
+ &apos;(xref-list-symbol-face ((t (:foreground &quot;green&quot;))) t)
+ &apos;(yas/field-highlight-face ((t (:background &quot;grey20&quot; :foreground &quot;gold&quot;))))
+ &apos;(yas/mirror-highlight-face ((t (:background &quot;brown&quot; :foreground &quot;white&quot;)))))
+</code></pre><h1 id="sdcv">sdcv</h1>
+<p>&#x4F7F;&#x7528; ~ M-x sdcv-search-point+ ~ &#x547D;&#x4EE4;&#x65F6;&#xFF0C;&#x4F1A;</p>
+<p>(a) &#x63D0;&#x793A;&#xFF1A; <code>mpv, mpplayer or mpg123 is needed to play word voice</code>
+(b) &#x51FA;&#x73B0;&#x4E2A;&#x5C0F;&#x6846;&#xFF0C;&#x800C;&#x65E0;&#x7ED3;&#x679C;&#x663E;&#x793A;</p>
+<h2 id="a">(a)</h2>
+<h3 id="install-mpv">install mpv</h3>
+<p>ubuntu install mpv</p>
+<h2 id="b">(b)</h2>
+<p><a href="https://eiuapp.github.io/spacemacs-handbook/post/spacemacs-sdcv.html" target="_blank">https://eiuapp.github.io/spacemacs-handbook/post/spacemacs-sdcv.html</a></p>
+<h3 id="&#x4FEE;&#x6539;&#x8BCD;&#x5178;&#x7684;&#x4E2D;&#x6587;&#x540D;&#x4E3A;&#x82F1;&#x6587;&#x540D;">&#x4FEE;&#x6539;&#x8BCD;&#x5178;&#x7684;&#x4E2D;&#x6587;&#x540D;&#x4E3A;&#x82F1;&#x6587;&#x540D;</h3>
+<p><a href="https://github.com/eiuapp/lazycat-emacs/commit/fed153e5a0aafae04d44565c7b5bb10ba478c408" target="_blank">https://github.com/eiuapp/lazycat-emacs/commit/fed153e5a0aafae04d44565c7b5bb10ba478c408</a></p>
+<p>&#x6CE8;&#x610F;&#xFF1A;&#x540E;&#x6765;&#x53D1;&#x73B0;&#xFF0C;<code>~/lazycat-emacs/site-lisp/extensions/sdcv/sdcv.el</code> &#x53EF;&#x4EE5;&#x4E0D;&#x4FEE;&#x6539;&#x3002;&#x5982;&#x679C;&#x51FA;&#x9519;&#x4E86;&#xFF0C;&#x518D;&#x8BD5;&#x7740;&#x6539;&#x4E00;&#x4E0B;&#x5427;&#x3002;</p>
+<h3 id="&#x539F;&#x7406;">&#x539F;&#x7406;</h3>
+<pre class="language-"><code class="lang-bash">$ <span class="token assign-left variable"><span class="token environment constant">LANG</span></span><span class="token operator">=</span>en_US.UTF-8 sdcv -n -u <span class="token string">&quot;&#x61D2;&#x866B;&#x7B80;&#x660E;&#x82F1;&#x6C49;&#x8BCD;&#x5178;&quot;</span> -u <span class="token string">&quot;&#x61D2;&#x866B;&#x7B80;&#x660E;&#x6C49;&#x82F1;&#x8BCD;&#x5178;&quot;</span> -u <span class="token string">&quot;KDic11&#x4E07;&#x82F1;&#x6C49;&#x8BCD;&#x5178;&quot;</span> hero --data-dir<span class="token operator">=</span>/home/a/lazycat-emacs/site-lisp/sdcv-dict
+zsh: <span class="token builtin class-name">command</span> not found: sdcv
+</code></pre>
+<h3 id="optionalstardict-directory">(Optional)stardict directory</h3>
+<p>&#x540C;&#x65F6;&#xFF0C;&#x8981;&#x6C42;&#x5728; $HOME/.stardict/dic/ &#x4E0B;&#xFF0C;&#x5DF2;&#x7ECF;&#x6709;&#x4E86;&#x8FD9;&#x4E9B;&#x5B57;&#x5178;&#x6587;&#x4EF6;&#x54DF;</p>
+<pre class="language-"><code class="lang-bash">$ <span class="token function">ls</span> ~/.stardict/dic                                                                                                                                                   &#x2500;&#x2500;<span class="token punctuation">(</span>Wed,May27<span class="token punctuation">)</span>&#x2500;&#x2518;
+stardict21shijishuangyukejicidian242      stardict-dictd-jargon-2.4.2               stardict-kdic-ec-11w-2.4.2    stardict-lazyworm-ec-2.4.2  stardict-oxford-gb-formated-2.4.2  stardict-stardict1.3-2.4.2
+stardict-21shijishuangyukejicidian-2.4.2  stardict-dictd_www.dict.org_foldoc-2.4.2  stardict-langdao-ce-gb-2.4.2  stardict-ncce-ce-2.4.2      stardict-ProECCE-2.4.2             stardict-xdict-ce-gb-2.4.2
+stardict-cdict-gb-2.4.2                   stardict-dictd_www.dict.org_wn-2.4.2      stardict-lazyworm-ce-2.4.2    stardict-ncce-ec-2.4.2      stardict-quick_eng-zh_CN-2.4.2     stardict-xdict-ec-gb-2.4.2
+$
+</code></pre>
+<p>&#x53EF;&#x4EE5;&#x4E0B;&#x8F7D;&#xFF1A;</p>
+<pre class="language-"><code class="lang-bash"><span class="token function">git</span> clone https://github.com/eiuapp/dot-stardict
+</code></pre>
+<h3 id="which-sdcv">which sdcv</h3>
+<p>&#x5B89;&#x88C5;sdcv</p>
+<pre class="language-"><code class="lang-bash"><span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> sdcv
+</code></pre>
+<h1 id="optional-gitignore">(Optional) .gitignore</h1>
+<p><a href="https://github.com/eiuapp/lazycat-emacs/commit/8b16c68dded61b131353fb8f45bd5fa66719641e" target="_blank">https://github.com/eiuapp/lazycat-emacs/commit/8b16c68dded61b131353fb8f45bd5fa66719641e</a></p>
+<h1 id="optional-readmeeiuappmd">(Optional) README.eiuapp.md</h1>
+<p>(Optional)<a href="https://github.com/eiuapp/lazycat-emacs/commit/7ae812acc5558babb43d9f1cce9da33c57ec2564" target="_blank">https://github.com/eiuapp/lazycat-emacs/commit/7ae812acc5558babb43d9f1cce9da33c57ec2564</a></p>
+<p>(Optional)<a href="https://github.com/eiuapp/lazycat-emacs/commit/83f4dfccf5f9b75c7c35af4c46045bcf4fce72da" target="_blank">https://github.com/eiuapp/lazycat-emacs/commit/83f4dfccf5f9b75c7c35af4c46045bcf4fce72da</a></p>
+<h1 id="setq-frame-title-and-frame-icon">setq frame title and frame icon</h1>
+<p><a href="https://github.com/eiuapp/lazycat-emacs/commit/873441b7e349998e6f4bb398053d3390fa7bc97e" target="_blank">https://github.com/eiuapp/lazycat-emacs/commit/873441b7e349998e6f4bb398053d3390fa7bc97e</a></p>
+<h1 id="eaf">eaf</h1>
+<h2 id="eaf-proxy">eaf proxy</h2>
+<p>&#x5F53;&#x521D;&#x6B21;&#x8FD0;&#x884C; ~M-x eaf-open-brower www.baidu.com~ &#x65F6;&#x4F1A;&#xFF0C;&#x56E0;eaf&#x7684;&#x9ED8;&#x8BA4;&#x914D;&#x7F6E;&#x4E2D;&#x7F51;&#x7EDC;&#x8BBE;&#x7F6E;&#x4E86; socks5 127.0.0.1 1080 &#x4EE3;&#x7406;&#x95EE;&#x9898;&#x800C;&#x627E;&#x4E0D;&#x5F00;&#x3002;
+&#x5982;&#x679C;&#x4E0D;&#x8981;&#x4EE3;&#x7406;&#xFF0C;&#x5219;&#x6CE8;&#x91CA;&#x6389;&#xFF1A;</p>
+<p><code>./lazycat-emacs/site-lisp/config/init-eaf.el</code> &#x7B2C;90&#x884C;&#x5DE6;&#x53F3;</p>
+<pre class="language-"><code>;; You need configuration your own local proxy program first.
+;; (setq eaf-proxy-type &quot;socks5&quot;)
+;; (setq eaf-proxy-host &quot;127.0.0.1&quot;)
+;; (setq eaf-proxy-port &quot;1080&quot;)
+(setq eaf-proxy-type &quot;&quot;)
+(setq eaf-proxy-host &quot;&quot;)
+(setq eaf-proxy-port &quot;&quot;)
+</code></pre><footer class="page-footer"><span class="copyright"><p><a href="https://github.com/eiuapp/emacs-handbook" target="_blank">Emacs&#x5B9E;&#x8DF5;&#x6307;&#x5357;</a> | <a href="https://github.com/eiuapp/emacs-handbook" target="_blank">Emacs&#x5B9E;&#x8DF5;&#x6307;&#x5357;</a></p><p><a href="https://res.cloudinary.com/dmtixvmgt/image/upload/v1539022273/wechat-qrcode_cml5dm.jpg" data-lightbox="2fd927ee-fa64-4eca-8ed5-6bd72b573a3c" target="_blank">&#x70B9;&#x51FB;&#x5173;&#x6CE8;&#x3010;servicemesher&#x3011;&#x516C;&#x4F17;&#x53F7;&#x56DE;&#x590D;&#x3010;&#x52A0;&#x7FA4;&#x3011;&#x52A0;&#x5165;&#x5B66;&#x4E60;&#x7FA4;</a> | </p>Copyright &#xA9; <a href="https://eiuapp.github.io" target="_blank">eiuapp.github.io</a> 2017-2019 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification"> Updated at 
+2020-06-02 08:17:08
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../usage/truncate-line.html" class="navigation navigation-prev " aria-label="Previous page: 换行">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="lazycat-install-package.html" class="navigation navigation-next " aria-label="Next page: lazycat-emacs 安装包">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"lazycat-emacs 初始化安装在ubuntu","level":"5.1","depth":1,"next":{"title":"lazycat-emacs 安装包","level":"5.2","depth":1,"path":"post/lazycat/lazycat-install-package.md","ref":"post/lazycat/lazycat-install-package.md","articles":[]},"previous":{"title":"换行","level":"4.3","depth":1,"path":"post/usage/truncate-line.md","ref":"post/usage/truncate-line.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","codesnippet","splitter","page-toc-button","editlink","back-to-top-button","-lunr","-search","search-plus","github-buttons@2.1.0","favicon@^0.0.2","tbfed-pagefooter@^0.0.1","3-ba","theme-default","-highlight","prism","prism-themes","sitemap-general","lightbox","adsense","ga","disqus","fontsettings","sharing","lunr","search","highlight","livereload"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"<p><a href=https://github.com/eiuapp/emacs-handbook>Emacs实践指南</a> | <a href=https://github.com/eiuapp/emacs-handbook>Emacs实践指南</a></p><p><a href=https://res.cloudinary.com/dmtixvmgt/image/upload/v1539022273/wechat-qrcode_cml5dm.jpg data-lightbox=2fd927ee-fa64-4eca-8ed5-6bd72b573a3c>点击关注【servicemesher】公众号回复【加群】加入学习群</a> | </p>Copyright © <a href=https://eiuapp.github.io>eiuapp.github.io</a> 2017-2019","modify_label":" Updated at ","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"lang":{"shell":"bash"},"css":["prism-themes/themes/prism-ghcolors.css"]},"disqus":{"useIdentifier":false,"shortName":"whoami"},"github":{"url":"https://github.com/eiuapp/emacs-handbook"},"editlink":{"label":"编辑本页","multilingual":false,"base":"https://github.com/eiuapp/emacs-handbook/blob/master/"},"livereload":{},"splitter":{},"adsense":{"client":"ca-pub-4029167986768912","slot":"2445941692","format":"auto","element":".page-inner section","position":"bottom"},"codesnippet":{},"sitemap-general":{"prefix":"https://eiuapp.github.io/emacs-handbook/"},"fontsettings":{"family":"sans","size":2,"theme":"white"},"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico"},"lightbox":{"jquery":true,"sameUuid":false},"page-toc-button":{},"back-to-top-button":{},"prism-themes":{},"github-buttons":{"repo":"eiuapp/emacs-handbook","types":["star"],"size":"small"},"3-ba":{"configuration":"auto","token":"11f7d254cfa4e0ca44b175c66d379ecc"},"ga":{"configuration":"auto","token":"UA-93485976-1"},"sharing":{"all":["facebook","google","twitter","weibo","instapaper"],"facebook":true,"google":false,"instapaper":false,"twitter":true,"vk":false,"weibo":false},"theme-default":{"showLevel":true,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}},"search-plus":{}},"theme":"default","author":"eiuapp","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Emacs Handbook - Emacs 实践指南 by eiuapp","language":"zh-hans","links":{"sidebar":{"Emacs Handbook":"https://eiuapp.github.io/emacs-handbook"}},"gitbook":"*","description":"Emacs Handbook - Emacs 实践指南 2019年 by eiuapp "},"file":{"path":"post/lazycat/lazycat-init-base-ubuntu.md","mtime":"2020-06-02T08:17:08.435Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-02T08:18:07.888Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-page-toc-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-editlink/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-3-ba/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-adsense/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+
+    </body>
+</html>
+

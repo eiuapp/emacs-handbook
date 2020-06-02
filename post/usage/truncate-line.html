@@ -1,0 +1,922 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>换行 · Emacs Handbook - Emacs 实践指南 by eiuapp</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="eiuapp">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-page-toc-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism-ghcolors.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../lazycat/lazycat-init-base-ubuntu.html" />
+    
+    
+    <link rel="prev" href="find-replace.html" />
+    
+
+    
+        <link rel="shortcut icon" href='../../favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='../../favicon.ico' type="image/x-icon">
+    
+    
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"repo":"eiuapp/emacs-handbook","types":["star"],"size":"small"};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://eiuapp.github.io/emacs-handbook" target="_blank" class="custom-link">Emacs Handbook</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        <li class="header">序言</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../emacs-env.html">
+            
+                <a href="../emacs-env.html">
+            
+                    
+                        <b>1.2.</b>
+                    
+                    环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">install</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../chemacs.html">
+            
+                <a href="../chemacs.html">
+            
+                    
+                        <b>2.1.</b>
+                    
+                    chemacs快速切换emacs配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../lazycat-emacs.html">
+            
+                <a href="../lazycat-emacs.html">
+            
+                    
+                        <b>2.2.</b>
+                    
+                    lazycat-emacs安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../lazycat-emacs-git-merge-master.html">
+            
+                <a href="../lazycat-emacs-git-merge-master.html">
+            
+                    
+                        <b>2.3.</b>
+                    
+                    lazycat-emacs同步更新
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../purcell-emacs-install.html">
+            
+                <a href="../purcell-emacs-install.html">
+            
+                    
+                        <b>2.4.</b>
+                    
+                    purcell-emacs安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../tommyx-emacs-install.html">
+            
+                <a href="../tommyx-emacs-install.html">
+            
+                    
+                        <b>2.5.</b>
+                    
+                    tommyx-emacs安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="../dsdshcym-doom-emacs-install.html">
+            
+                <a href="../dsdshcym-doom-emacs-install.html">
+            
+                    
+                        <b>2.6.</b>
+                    
+                    dsdshcym-doom-emacs安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="../pierre-lecocq-emacs-install.html">
+            
+                <a href="../pierre-lecocq-emacs-install.html">
+            
+                    
+                        <b>2.7.</b>
+                    
+                    pierre-lecocq emacs安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">常见问题</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../emacs-open-remote-shell.html">
+            
+                <a href="../emacs-open-remote-shell.html">
+            
+                    
+                        <b>3.1.</b>
+                    
+                    emacs使用tramp时打开远程shell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../emacs-auto-use-diff-eslint.html">
+            
+                <a href="../emacs-auto-use-diff-eslint.html">
+            
+                    
+                        <b>3.2.</b>
+                    
+                    emacs 不同的js工程使用不同的eslint
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">使用</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../w3m/w3m-step-by-step.html">
+            
+                <a href="../w3m/w3m-step-by-step.html">
+            
+                    
+                        <b>4.1.</b>
+                    
+                    在 Emacs 下浏览网页（w3m）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="find-replace.html">
+            
+                <a href="find-replace.html">
+            
+                    
+                        <b>4.2.</b>
+                    
+                    find and replace
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="4.3" data-path="truncate-line.html">
+            
+                <a href="truncate-line.html">
+            
+                    
+                        <b>4.3.</b>
+                    
+                    换行
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">lazycat-emacs</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../lazycat/lazycat-init-base-ubuntu.html">
+            
+                <a href="../lazycat/lazycat-init-base-ubuntu.html">
+            
+                    
+                        <b>5.1.</b>
+                    
+                    lazycat-emacs 初始化安装在ubuntu
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../lazycat/lazycat-install-package.html">
+            
+                <a href="../lazycat/lazycat-install-package.html">
+            
+                    
+                        <b>5.2.</b>
+                    
+                    lazycat-emacs 安装包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="../lazycat/lazycat-key.html">
+            
+                <a href="../lazycat/lazycat-key.html">
+            
+                    
+                        <b>5.3.</b>
+                    
+                    lazycat-emacs key map
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="../lazycat/lazycat-input-method.html">
+            
+                <a href="../lazycat/lazycat-input-method.html">
+            
+                    
+                        <b>5.4.</b>
+                    
+                    lazycat-emacs input method
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">setup</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../emacs-display-setup.html">
+            
+                <a href="../emacs-display-setup.html">
+            
+                    
+                        <b>6.1.</b>
+                    
+                    emacs some display setup
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="../emacs-frame-title.html">
+            
+                <a href="../emacs-frame-title.html">
+            
+                    
+                        <b>6.2.</b>
+                    
+                    emacs setup frame title
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="../usefull-packages.html">
+            
+                <a href="../usefull-packages.html">
+            
+                    
+                        <b>6.3.</b>
+                    
+                    some usefull packages
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="../install-emacs-application-framework.html">
+            
+                <a href="../install-emacs-application-framework.html">
+            
+                    
+                        <b>6.4.</b>
+                    
+                    install emacs-application-framework
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">extensions</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../extensions/emacs_chrome.html">
+            
+                <a href="../extensions/emacs_chrome.html">
+            
+                    
+                        <b>7.1.</b>
+                    
+                    emacs chrome
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="../extensions/emacs-word.html">
+            
+                <a href="../extensions/emacs-word.html">
+            
+                    
+                        <b>7.2.</b>
+                    
+                    emacs with word
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">theme</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../theme/vscode-dark-emacs-theme.html">
+            
+                <a href="../theme/vscode-dark-emacs-theme.html">
+            
+                    
+                        <b>8.1.</b>
+                    
+                    vscode-dark-emacs-theme
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="../emacs-network/emacs-proxy.html">
+            
+                <a href="../emacs-network/emacs-proxy.html">
+            
+                    
+                        <b>8.2.</b>
+                    
+                    emacs with proxy
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">emacs rocks</li>
+        
+        
+    
+        <li class="chapter " data-level="9.1" data-path="../emacs-rocks/5-keys.html">
+            
+                <a href="../emacs-rocks/5-keys.html">
+            
+                    
+                        <b>9.1.</b>
+                    
+                    episode 05
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">org-mode</li>
+        
+        
+    
+        <li class="chapter " data-level="10.1" data-path="../org-mode/org-mode-pdf.html">
+            
+                <a href="../org-mode/org-mode-pdf.html">
+            
+                    
+                        <b>10.1.</b>
+                    
+                    org-mode与pdf
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">magit</li>
+        
+        
+    
+        <li class="chapter " data-level="11.1" data-path="../magit/faq.html">
+            
+                <a href="../magit/faq.html">
+            
+                    
+                        <b>11.1.</b>
+                    
+                    magit faq
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">irc</li>
+        
+        
+    
+        <li class="chapter " data-level="12.1" data-path="../irc/emacs-irc.html">
+            
+                <a href="../irc/emacs-irc.html">
+            
+                    
+                        <b>12.1.</b>
+                    
+                    emacs irc
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">未来</li>
+        
+        
+    
+        <li class="chapter " data-level="13.1" data-path="../learn/learn-how-to-learn.html">
+            
+                <a href="../learn/learn-how-to-learn.html">
+            
+                    
+                        <b>13.1.</b>
+                    
+                    learn how to learn
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">my emacs faq record</li>
+        
+        
+    
+        <li class="chapter " data-level="14.1" data-path="../learn/emacs-record.html">
+            
+                <a href="../learn/emacs-record.html">
+            
+                    
+                        <b>14.1.</b>
+                    
+                    my emacs record
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">相关资源</li>
+        
+        
+    
+        <li class="chapter " data-level="15.1" data-path="../emacs-reference.html">
+            
+                <a href="../emacs-reference.html">
+            
+                    
+                        <b>15.1.</b>
+                    
+                    emacs master configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >换行</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>&#x5173;&#x4E8E;emacs&#x7684;&#x6362;&#x884C;</p>
+<pre class="language-"><code>1.&#x4E0D;&#x5ACC;&#x70E6;&#x7684;&#xFF0C;&#x6BCF;&#x6B21;M-x toggle-truncate-lines&#x5207;&#x6362;&#x6362;&#x884C;&#x4E0E;&#x4E0D;&#x6362;&#x884C;
+
+2.&#x4E00;&#x52B3;&#x6C38;&#x9038;&#x7684;&#xFF0C;M-x customize-option&#xFF0C;&#x8F93;&#x5165;truncate-partial-width-windows&#xFF0C;&#x5C06;&#x51FA;&#x6765;&#x7684;&#x8BBE;&#x7F6E;&#x9875;&#x9762;&#x4E2D;&#x7684;&#x53C2;&#x6570;&#x6539;&#x4E3A;off&#xFF0C;&#x7136;&#x540E;&#x4FDD;&#x5B58;(Save for future sessions)
+
+3.M-x auto-fill-mode&#x4E5F;&#x662F;&#x5207;&#x6362;&#x6362;&#x884C;&#x6A21;&#x5F0F;&#xFF0C;&#x4E0D;&#x8FC7;&#x8FD9;&#x662F;&#x8981;&#x5728;&#x6587;&#x7AE0;&#x5185;&#x5BB9;&#x91CC;&#x63D2;&#x5165;&#x56DE;&#x8F66;&#x7B26;&#x53F7;
+</code></pre><ul>
+<li><a href="https://www.cnblogs.com/samael/articles/2017623.html" target="_blank">https://www.cnblogs.com/samael/articles/2017623.html</a></li>
+<li><a href="https://blog.csdn.net/weixin_30532369/article/details/95296140" target="_blank">https://blog.csdn.net/weixin_30532369/article/details/95296140</a></li>
+</ul>
+<footer class="page-footer"><span class="copyright"><p><a href="https://github.com/eiuapp/emacs-handbook" target="_blank">Emacs&#x5B9E;&#x8DF5;&#x6307;&#x5357;</a> | <a href="https://github.com/eiuapp/emacs-handbook" target="_blank">Emacs&#x5B9E;&#x8DF5;&#x6307;&#x5357;</a></p><p><a href="https://res.cloudinary.com/dmtixvmgt/image/upload/v1539022273/wechat-qrcode_cml5dm.jpg" data-lightbox="2fd927ee-fa64-4eca-8ed5-6bd72b573a3c" target="_blank">&#x70B9;&#x51FB;&#x5173;&#x6CE8;&#x3010;servicemesher&#x3011;&#x516C;&#x4F17;&#x53F7;&#x56DE;&#x590D;&#x3010;&#x52A0;&#x7FA4;&#x3011;&#x52A0;&#x5165;&#x5B66;&#x4E60;&#x7FA4;</a> | </p>Copyright &#xA9; <a href="https://eiuapp.github.io" target="_blank">eiuapp.github.io</a> 2017-2019 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification"> Updated at 
+2020-06-02 08:17:08
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="find-replace.html" class="navigation navigation-prev " aria-label="Previous page: find and replace">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../lazycat/lazycat-init-base-ubuntu.html" class="navigation navigation-next " aria-label="Next page: lazycat-emacs 初始化安装在ubuntu">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"换行","level":"4.3","depth":1,"next":{"title":"lazycat-emacs 初始化安装在ubuntu","level":"5.1","depth":1,"path":"post/lazycat/lazycat-init-base-ubuntu.md","ref":"post/lazycat/lazycat-init-base-ubuntu.md","articles":[]},"previous":{"title":"find and replace","level":"4.2","depth":1,"path":"post/usage/find-replace.md","ref":"post/usage/find-replace.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","codesnippet","splitter","page-toc-button","editlink","back-to-top-button","-lunr","-search","search-plus","github-buttons@2.1.0","favicon@^0.0.2","tbfed-pagefooter@^0.0.1","3-ba","theme-default","-highlight","prism","prism-themes","sitemap-general","lightbox","adsense","ga","disqus","fontsettings","sharing","lunr","search","highlight","livereload"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"<p><a href=https://github.com/eiuapp/emacs-handbook>Emacs实践指南</a> | <a href=https://github.com/eiuapp/emacs-handbook>Emacs实践指南</a></p><p><a href=https://res.cloudinary.com/dmtixvmgt/image/upload/v1539022273/wechat-qrcode_cml5dm.jpg data-lightbox=2fd927ee-fa64-4eca-8ed5-6bd72b573a3c>点击关注【servicemesher】公众号回复【加群】加入学习群</a> | </p>Copyright © <a href=https://eiuapp.github.io>eiuapp.github.io</a> 2017-2019","modify_label":" Updated at ","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"lang":{"shell":"bash"},"css":["prism-themes/themes/prism-ghcolors.css"]},"disqus":{"useIdentifier":false,"shortName":"whoami"},"github":{"url":"https://github.com/eiuapp/emacs-handbook"},"editlink":{"label":"编辑本页","multilingual":false,"base":"https://github.com/eiuapp/emacs-handbook/blob/master/"},"livereload":{},"splitter":{},"adsense":{"client":"ca-pub-4029167986768912","slot":"2445941692","format":"auto","element":".page-inner section","position":"bottom"},"codesnippet":{},"sitemap-general":{"prefix":"https://eiuapp.github.io/emacs-handbook/"},"fontsettings":{"family":"sans","size":2,"theme":"white"},"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico"},"lightbox":{"jquery":true,"sameUuid":false},"page-toc-button":{},"back-to-top-button":{},"prism-themes":{},"github-buttons":{"repo":"eiuapp/emacs-handbook","types":["star"],"size":"small"},"3-ba":{"configuration":"auto","token":"11f7d254cfa4e0ca44b175c66d379ecc"},"ga":{"configuration":"auto","token":"UA-93485976-1"},"sharing":{"all":["facebook","google","twitter","weibo","instapaper"],"facebook":true,"google":false,"instapaper":false,"twitter":true,"vk":false,"weibo":false},"theme-default":{"showLevel":true,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}},"search-plus":{}},"theme":"default","author":"eiuapp","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Emacs Handbook - Emacs 实践指南 by eiuapp","language":"zh-hans","links":{"sidebar":{"Emacs Handbook":"https://eiuapp.github.io/emacs-handbook"}},"gitbook":"*","description":"Emacs Handbook - Emacs 实践指南 2019年 by eiuapp "},"file":{"path":"post/usage/truncate-line.md","mtime":"2020-06-02T08:17:08.435Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-02T08:18:07.888Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-page-toc-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-editlink/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-3-ba/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-adsense/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+
+    </body>
+</html>
+

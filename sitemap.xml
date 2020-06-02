@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+<url> <loc>https://eiuapp.github.io/emacs-handbook/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://eiuapp.github.io/emacs-handbook/post/emacs-env.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://eiuapp.github.io/emacs-handbook/post/chemacs.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://eiuapp.github.io/emacs-handbook/post/lazycat-emacs.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://eiuapp.github.io/emacs-handbook/post/lazycat-emacs-git-merge-master.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://eiuapp.github.io/emacs-handbook/post/purcell-emacs-install.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://eiuapp.github.io/emacs-handbook/post/tommyx-emacs-install.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://eiuapp.github.io/emacs-handbook/post/dsdshcym-doom-emacs-install.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://eiuapp.github.io/emacs-handbook/post/pierre-lecocq-emacs-install.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://eiuapp.github.io/emacs-handbook/post/emacs-open-remote-shell.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://eiuapp.github.io/emacs-handbook/post/emacs-auto-use-diff-eslint.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://eiuapp.github.io/emacs-handbook/post/w3m/w3m-step-by-step.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://eiuapp.github.io/emacs-handbook/post/usage/find-replace.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://eiuapp.github.io/emacs-handbook/post/usage/truncate-line.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://eiuapp.github.io/emacs-handbook/post/lazycat/lazycat-init-base-ubuntu.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://eiuapp.github.io/emacs-handbook/post/lazycat/lazycat-install-package.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://eiuapp.github.io/emacs-handbook/post/lazycat/lazycat-key.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://eiuapp.github.io/emacs-handbook/post/lazycat/lazycat-input-method.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://eiuapp.github.io/emacs-handbook/post/emacs-display-setup.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://eiuapp.github.io/emacs-handbook/post/emacs-frame-title.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://eiuapp.github.io/emacs-handbook/post/usefull-packages.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://eiuapp.github.io/emacs-handbook/post/install-emacs-application-framework.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://eiuapp.github.io/emacs-handbook/post/extensions/emacs_chrome.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://eiuapp.github.io/emacs-handbook/post/extensions/emacs-word.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://eiuapp.github.io/emacs-handbook/post/theme/vscode-dark-emacs-theme.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://eiuapp.github.io/emacs-handbook/post/emacs-network/emacs-proxy.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://eiuapp.github.io/emacs-handbook/post/emacs-rocks/5-keys.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://eiuapp.github.io/emacs-handbook/post/org-mode/org-mode-pdf.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://eiuapp.github.io/emacs-handbook/post/magit/faq.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://eiuapp.github.io/emacs-handbook/post/irc/emacs-irc.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://eiuapp.github.io/emacs-handbook/post/learn/learn-how-to-learn.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://eiuapp.github.io/emacs-handbook/post/learn/emacs-record.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://eiuapp.github.io/emacs-handbook/post/emacs-reference.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+</urlset>
