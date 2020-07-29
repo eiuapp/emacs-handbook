@@ -529,3 +529,35 @@ https://github.com/eiuapp/lazycat-emacs/commit/873441b7e349998e6f4bb398053d3390f
 (setq eaf-proxy-host "")
 (setq eaf-proxy-port "")
 ```
+# read-only-mode
+## find-file-read-only
+
+use `C-x C-r` or `M-x find-file-read-only` to open a file.
+
+bad:
+
+- when in dired-mode, open file, it is not read-only-mode.
+
+## (Optional)set `M-x read-only-mode` global
+# flycheck
+## golang
+### `go vet`, not `go tool vet`
+
+```bash
+ $ go tool vet main.go
+vet: invoking "go tool vet" directly is unsupported; use "go vet"
+ $
+```
+
+if you cannot run `go tool vet`, you must fix `lazycat/site-lisp/extension/flycheck/flycheck.el`
+
+```
+(flycheck-define-checker go-vet
+  "A Go syntax checker using the `go tool vet' command.
+
+See URL `https://golang.org/cmd/go/' and URL
+`https://golang.org/cmd/vet/'."
+:command ("go" "vet" "-all"
+```
+
+change `command ("go" "tool" "vet" "-all"` to `command ("go" "vet" "-all"`.
