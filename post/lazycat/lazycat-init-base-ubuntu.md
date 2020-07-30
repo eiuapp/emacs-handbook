@@ -512,6 +512,11 @@ https://github.com/eiuapp/lazycat-emacs/commit/8b16c68dded61b131353fb8f45bd5fa66
 # setq frame title and frame icon
 
 https://github.com/eiuapp/lazycat-emacs/commit/873441b7e349998e6f4bb398053d3390fa7bc97e
+
+## (Optional) exit full screen
+
+~M-x toggle-frame-fullscreen~
+
 # eaf
 ## eaf proxy
 
@@ -539,6 +544,9 @@ bad:
 - when in dired-mode, open file, it is not read-only-mode.
 
 ## (Optional)set `M-x read-only-mode` global
+
+(global-auto-readonly)  但是，好像没有生效。why?
+
 # flycheck
 ## golang
 ### `go vet`, not `go tool vet`
