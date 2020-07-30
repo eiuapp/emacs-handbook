@@ -60,7 +60,7 @@ add a file ~lazycat/site-lisp/config/init-vscode-dark-emacs-theme.el~
     )
 ```
 
-### (ok)) M3: 
+### (ok) M3: ./site-lisp/config/init-0mine.el
 
 把 init-vscode-dark-emacs-theme.el 等文件，放在另一个地方, 方便管理个性化配置文件。
 
@@ -138,3 +138,58 @@ self/site-lisp/
 git clone https://github.com/ianpan870102/vscode-dark-emacs-theme
 
 
+### (ok) M4: self/site-lisp/config/init-init.el
+
+把 init-vscode-dark-emacs-theme.el 等文件，放在一个名为 init-init.el 的文件中，并且这个文件在个性化配置文件git仓库中。
+
+修改几处：
+
+- ./site-lisp/config/init.el
+- self/site-lisp (个性化配置文件)
+
+#### ./site-lisp/config/init.el
+
+在 ~lazycat/site-lisp/config/init.el~ 加入2句 用于加载配置：
+
+```
+    ;; 可以延后加载的
+    (run-with-idle-timer
+        ...
+        ...
+        ...
+         (add-to-list 'load-path "~/lazycat-emacs/self/site-lisp/config/")
+         (require 'init-init)
+        ...
+        ...
+        ...
+    )
+```
+#### self/site-lisp (个性化配置文件)
+
+- self/site-lisp/config/init-init.el
+
+```
+(add-to-list 'load-path "~/lazycat-emacs/self/site-lisp/config/")
+(let (
+      ;; 加载的时候临时增大`gc-cons-threshold'以加速启动速度。
+      (gc-cons-threshold most-positive-fixnum)
+      (gc-cons-percentage 0.6)
+      ;; 清空避免加载远程文件的时候分析文件。
+      (file-name-handler-alist nil))
+
+  ;; 定义一些启动目录，方便下次迁移修改
+
+  (with-temp-message ""                 ;抹掉插件启动的输出
+    ;; (require 'benchmark-init-modes)
+
+    ;; 可以延后加载的
+    (run-with-idle-timer
+     1 nil
+     #'(lambda ()
+         
+         (require 'init-vscode-dark-emacs-theme) ;; 使用 vscode-dark-emacs-theme
+
+         ))))
+
+(provide 'init-init)
+```
