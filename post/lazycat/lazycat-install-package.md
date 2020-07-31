@@ -129,7 +129,7 @@ self/site-lisp/
 ```
  (add-to-list 'custom-theme-load-path "~/lazycat-emacs/self/site-lisp/extensions/vscode-dark-emacs-theme/")
  (load-theme 'vscode-dark t)
- 
+
 (provide 'init-vscode-dark-emacs-theme)
 ```
 
@@ -186,7 +186,7 @@ git clone https://github.com/ianpan870102/vscode-dark-emacs-theme
     (run-with-idle-timer
      1 nil
      #'(lambda ()
-         
+
          (require 'init-vscode-dark-emacs-theme) ;; 使用 vscode-dark-emacs-theme
 
          ))))
