@@ -615,3 +615,12 @@ sudo apt install aria2c
 ```bash
 pip3 install pyinotify markdown
 ```
+## eaf open pdf
+
+if have error ~no module named 'fitz'~, then you need install ~fitz~.
+
+```shell
+pip3 install PyMuPDF
+```
+
+use ~M-x eaf-open~ to open pdf file.
