@@ -575,9 +575,9 @@ Your branch is up to date with 'origin/master'.
 ```
 
 
-# install pyqt5
+# install pyqt5==5.12.0
 
-安装过程见文档
+安装过程见文档(wiki/ubuntu/ubuntu-install-pyqt5.org)
 
 # install PyQt related packages
 
@@ -587,10 +587,104 @@ some pyqt related package must install
 
 ## install PyQtWebEngine
 
+### 安装 PyQtWebEngine==5.12.1
+
+```
+sudo pip install PyQtWebEngine==5.12.1  -i https://pypi.doubanio.com/simple/ --trusted-host pypi.doubanio.com 
+```
+
+### (deprecated) 安装 PyQtWebEngine==5.14.0
+
 - version: PyQtWebEngine-5.14.0
 
 ```
 pip3 install PyQtWebEngine -i https://pypi.tuna.tsinghua.edu.cn/simple
+```
+
+### PyQtWebEngine 版本与 PyQt5 版本匹配问题
+
+```
+$ python     
+Python 2.7.17 (default, Sep 30 2020, 13:38:04) 
+[GCC 7.5.0] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>> from PyQt5.QtWebEngineWidgets import QWebEngineView, QWebEnginePage, QWebEngineContextMenuData, QWebEngineProfile, QWebEngineSettings
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ImportError: No module named PyQt5.QtWebEngineWidgets
+```
+
+但是，我记得是安装过了的，这里的提示，让我想起是不是要使用 python3.* 而不是 python2.*
+
+```shell
+$ sudo pip install PyQtWebEngine  -i https://pypi.doubanio.com/simple/ --trusted-host pypi.doubanio.com 
+WARNING: The directory '/home/a/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
+Looking in indexes: https://pypi.doubanio.com/simple/
+Requirement already satisfied: PyQtWebEngine in ./.local/lib/python3.6/site-packages (5.14.0)
+Collecting PyQt5-sip<13,>=12.7
+  Downloading https://pypi.doubanio.com/packages/f5/a7/3c52a17b065bcc69a6ca791b88901feeacd410235ec4b23441d975d0ecf4/PyQt5_sip-12.8.1-cp36-cp36m-manylinux1_x86_64.whl (278 kB)
+     |████████████████████████████████| 278 kB 802 kB/s 
+Collecting PyQt5>=5.14
+  Downloading https://pypi.doubanio.com/packages/4c/bb/7fce18fbe0275d7a3e069a306d8f4662c77eda30ec6780634fd4a7ee50ce/PyQt5-5.15.1-5.15.1-cp35.cp36.cp37.cp38.cp39-abi3-manylinux2014_x86_64.whl (71.6 MB)
+     |████████████████████████████████| 71.6 MB 13.4 MB/s 
+Installing collected packages: PyQt5-sip, PyQt5
+  Attempting uninstall: PyQt5-sip
+    Found existing installation: PyQt5-sip 4.19.18
+    Uninstalling PyQt5-sip-4.19.18:
+      Successfully uninstalled PyQt5-sip-4.19.18
+  Attempting uninstall: PyQt5
+    Found existing installation: PyQt5 5.12
+    Uninstalling PyQt5-5.12:
+      Successfully uninstalled PyQt5-5.12
+Successfully installed PyQt5-5.15.1 PyQt5-sip-12.8.1
+WARNING: You are using pip version 20.1.1; however, version 20.2.4 is available.
+You should consider upgrading via the '/usr/bin/python3 -m pip install --upgrade pip' command.
+ a@a  ~   master  python3                                                                                                  
+Python 3.6.9 (default, Oct  8 2020, 12:12:24) 
+[GCC 8.4.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> from PyQt5.QtWebEngineWidgets import  QWebEngineProfile
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ImportError: libQt5QmlModels.so.5: cannot open shared object file: No such file or directory
+>>> import sys
+>>> sys.modules.keys()
+dict_keys(['builtins', 'sys', '_frozen_importlib', '_imp', '_warnings', '_thread', '_weakref', '_frozen_importlib_external', '_io', 'marshal', 'posix', 'zipimport', 'encodings', 'codecs', '_codecs', 'encodings.aliases', 'encodings.utf_8', '_signal', '__main__', 'encodings.latin_1', 'io', 'abc', '_weakrefset', 'site', 'os', 'errno', 'stat', '_stat', 'posixpath', 'genericpath', 'os.path', '_collections_abc', '_sitebuiltins', 'sysconfig', '_sysconfigdata_m_linux_x86_64-linux-gnu', '_bootlocale', '_locale', 'types', 'functools', '_functools', 'collections', 'operator', '_operator', 'keyword', 'heapq', '_heapq', 'itertools', 'reprlib', '_collections', 'weakref', 'collections.abc', 'importlib', 'importlib._bootstrap', 'importlib._bootstrap_external', 'warnings', 'importlib.util', 'importlib.abc', 'importlib.machinery', 'contextlib', 'zope', 'sitecustomize', 'apport_python_hook', 'readline', 'atexit', 'rlcompleter', 'PyQt5', 'pkgutil', 'apt_pkg', 're', 'enum', 'sre_compile', '_sre', 'sre_parse', 'sre_constants', 'copyreg', 'traceback', 'linecache', 'tokenize', 'token', 'apport', 'time', 'apport.report', 'subprocess', 'signal', '_posixsubprocess', 'select', 'selectors', 'math', 'threading', 'tempfile', 'shutil', 'fnmatch', 'zlib', 'bz2', '_compression', '_bz2', 'lzma', '_lzma', 'pwd', 'grp', 'random', 'hashlib', '_hashlib', '_blake2', '_sha3', 'bisect', '_bisect', '_random', 'glob', 'locale', 'imp', 'xml', 'xml.dom', 'xml.dom.domreg', 'xml.dom.minidom', 'xml.dom.minicompat', 'xml.dom.xmlbuilder', 'copy', 'xml.dom.NodeFilter', 'xml.parsers', 'xml.parsers.expat', 'pyexpat.errors', 'pyexpat.model', 'pyexpat', 'xml.parsers.expat.model', 'xml.parsers.expat.errors', 'urllib', 'urllib.error', 'urllib.response', 'urllib.request', 'base64', 'struct', '_struct', 'binascii', 'email', 'http', 'http.client', 'email.parser', 'email.feedparser', 'email.errors', 'email._policybase', 'email.header', 'email.quoprimime', 'string', '_string', 'email.base64mime', 'email.charset', 'email.encoders', 'quopri', 'email.utils', 'socket', '_socket', 'datetime', '_datetime', 'urllib.parse', 'email._parseaddr', 'calendar', 'email.message', 'uu', 'email._encoded_words', 'email.iterators', 'ssl', 'ipaddress', 'textwrap', '_ssl', 'problem_report', 'gzip', 'email.mime', 'email.mime.multipart', 'email.mime.base', 'email.policy', 'email.headerregistry', 'email._header_value_parser', 'email.contentmanager', 'email.mime.text', 'email.mime.nonmultipart', 'apport.fileutils', 'configparser', 'apport.packaging_impl', 'json', 'json.decoder', 'json.scanner', '_json', 'json.encoder', 'apt', '__future__', 'apt.package', 'logging', 'typing', 'typing.io', 'typing.re', 'apt.progress', 'apt.progress.text', 'apt.progress.base', 'fcntl', 'apt.cache', 'apt.cdrom', 'pickle', '_compat_pickle', '_pickle', 'apport.packaging', 'gettext'])
+>>> 
+```
+
+从上面安装，发现，安装 PyQtWebEngine 的同时，会自动安装上 PyQt5-5.15.1 PyQt5-sip-12.8.1。
+这个时候，会出现另一个问题： ~ImportError: libQt5QmlModels.so.5: cannot open shared object file: No such file or directory~
+
+所以，把版本，退回到 5.12
+
+```shell
+sudo pip install PyQtWebEngine==5.12.1  -i https://pypi.doubanio.com/simple/ --trusted-host pypi.doubanio.com 
+WARNING: The directory '/home/a/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
+Looking in indexes: https://pypi.doubanio.com/simple/
+Collecting PyQtWebEngine==5.12.1
+  Downloading https://pypi.doubanio.com/packages/90/c9/bde6c215e9b08f149e5e8936b512dabfe0c3c8893c1397d2c53965a3dc4f/PyQtWebEngine-5.12.1-5.12.10-cp35.cp36.cp37.cp38.cp39-abi3-manylinux1_x86_64.whl (60.1 MB)
+     |████████████████████████████████| 60.1 MB 7.5 MB/s 
+Requirement already satisfied: PyQt5>=5.12 in /usr/local/lib/python3.6/dist-packages (from PyQtWebEngine==5.12.1) (5.15.1)
+Requirement already satisfied: PyQt5-sip<13,>=12.8 in /usr/local/lib/python3.6/dist-packages (from PyQt5>=5.12->PyQtWebEngine==5.12.1) (12.8.1)
+Installing collected packages: PyQtWebEngine
+  Attempting uninstall: PyQtWebEngine
+    Found existing installation: PyQtWebEngine 5.14.0
+    Uninstalling PyQtWebEngine-5.14.0:
+      Successfully uninstalled PyQtWebEngine-5.14.0
+Successfully installed PyQtWebEngine-5.12.1
+WARNING: You are using pip version 20.1.1; however, version 20.2.4 is available.
+You should consider upgrading via the '/usr/bin/python3 -m pip install --upgrade pip' command.
+ a@a  ~   master  python3                                                                                                       
+Python 3.6.9 (default, Oct  8 2020, 12:12:24) 
+[GCC 8.4.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> from PyQt5.QtWebEngineWidgets import  QWebEngineProfile
+>>> import sys
+>>> sys.modules.keys()
+dict_keys(['builtins', 'sys', '_frozen_importlib', '_imp', '_warnings', '_thread', '_weakref', '_frozen_importlib_external', '_io', 'marshal', 'posix', 'zipimport', 'encodings', 'codecs', '_codecs', 'encodings.aliases', 'encodings.utf_8', '_signal', '__main__', 'encodings.latin_1', 'io', 'abc', '_weakrefset', 'site', 'os', 'errno', 'stat', '_stat', 'posixpath', 'genericpath', 'os.path', '_collections_abc', '_sitebuiltins', 'sysconfig', '_sysconfigdata_m_linux_x86_64-linux-gnu', '_bootlocale', '_locale', 'types', 'functools', '_functools', 'collections', 'operator', '_operator', 'keyword', 'heapq', '_heapq', 'itertools', 'reprlib', '_collections', 'weakref', 'collections.abc', 'importlib', 'importlib._bootstrap', 'importlib._bootstrap_external', 'warnings', 'importlib.util', 'importlib.abc', 'importlib.machinery', 'contextlib', 'zope', 'sitecustomize', 'apport_python_hook', 'readline', 'atexit', 'rlcompleter', 'PyQt5', 'pkgutil', 'sip', 'PyQt5.sip', 'enum', 'PyQt5.QtCore', 'PyQt5.QtNetwork', 'PyQt5.QtWebEngineCore', 'PyQt5.QtGui', 'PyQt5.QtWidgets', 'PyQt5.QtWebChannel', 'PyQt5.QtPrintSupport', 'PyQt5.QtWebEngineWidgets'])
+>>> 
+
 ```
 
 # eaf
